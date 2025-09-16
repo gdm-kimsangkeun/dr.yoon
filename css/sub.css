@@ -245,7 +245,8 @@ body{overflow-x:hidden;}
   .panel__desc{padding: 20px 0 60px;}
   .tabSection .panels .panel .surgerySteps{padding: 60px 0;}
   .tabSection .panels .panel .surgerySteps .stepCard__bar{font-size: 2.5vw;}
-  
+  .tabSection .panels .panel .candidatesBG .candi-title{font-size: 22px;}
+  .tabSection .panels .panel .candidatesBG .candi-list li{font-size: 16px;}
 }
 
 /* <= 768px (모바일) */
