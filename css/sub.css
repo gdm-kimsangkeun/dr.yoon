@@ -140,7 +140,7 @@ body{overflow-x:hidden;}
   font-size:clamp(22px,3.65vw,48px); font-weight:600; letter-spacing:-.02em; margin:0 0 20px; color:#131313;
 }
 .tabSection .panels .panel .surgerySteps .steps__desc{
-  color:#555; font-size:clamp(14px,16px,16px); line-height:1.8; margin:0;
+  color:#555; font-size:clamp(14px,16px,16px); line-height:1.8; margin:0; font-weight: 400;
 }
 .tabSection .panels .panel .surgerySteps .steps__grid{
   list-style:none; padding-left:0; margin:0 auto; box-sizing:border-box;
