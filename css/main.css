@@ -585,3 +585,8 @@
   @media(max-width:1024px){
     .spacer-sec{padding: 0 15px 60px;}
   }
+
+
+  /* 탭 패널 표시/숨김: .is-active만 보이기 */
+.panel { display: none; }
+.panel.is-active { display: block !important;  }

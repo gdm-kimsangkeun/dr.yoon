@@ -63,7 +63,7 @@ body{overflow-x:hidden;}
 /* =========================================================
    4) Panels (탭 컨텐츠 공통)
 ========================================================= */
-.panels{width:var(--wrap); margin:0 auto; text-align:center; overflow:visible;}
+.panels{width:1240px; margin:0 auto; text-align:center; overflow:visible;}
 .panel{animation:fade .24s ease;}
 .panel[hidden]{display:none;}
 .panel__title{font-size:clamp(26px,3.6vw,48px); padding-top:150px; letter-spacing:-.02em; font-weight:600;}
@@ -173,6 +173,14 @@ body{overflow-x:hidden;}
   padding:clamp(48px, 6vw, 130px) 0;
   color:#1a140e; font-family:Pretendard, system-ui, "Noto Sans KR", sans-serif; box-sizing:border-box;
 }
+.tabSection .panels .panel .candidatesBG02{background: url('../img/content0202.png');}
+.tabSection .panels .panel .candidatesBG03{background: url('../img/content0303.png');}
+.tabSection .panels .panel .candidatesBG04{background: url('../img/content0404.png');}
+.tabSection .panels .panel .candidatesBG05{background: url('../img/content0505.png');}
+.tabSection .panels .panel .candidatesBG06{background: url('../img/content0606.png');}
+.tabSection .panels .panel .candidatesBG07{background: url('../img/content0707.png');}
+
+
 .tabSection .panels .panel .candidatesBG .candi-inner{
   width:min(92vw, 1400px); margin:0 auto;
   display:grid; grid-template-columns:1fr 0.95fr; align-items:center;
@@ -226,10 +234,19 @@ body{overflow-x:hidden;}
   /* 수술방법 격자 3열 */
   .tabSection .panels .panel .surgerySteps .steps__grid{
     grid-template-columns:repeat(2, minmax(0,1fr));
+    
   }
 
   /* Candidates 한 열 */
-  .tabSection .panels .panel .candidatesBG{background: url('../img/content0101_01.jpg') center no-repeat;}
+  .tabSection .panels .panel .candidatesBG01{background: url('../img/content0101_m.jpg') center no-repeat;}
+  .tabSection .panels .panel .candidatesBG02{background: url('../img/content0202_m.jpg') center no-repeat;}
+  .tabSection .panels .panel .candidatesBG03{background: url('../img/content0303_m.jpg') center no-repeat;}
+  .tabSection .panels .panel .candidatesBG04{background: url('../img/content0404_m.jpg') center no-repeat;}
+  .tabSection .panels .panel .candidatesBG05{background: url('../img/content0505_m.jpg') center no-repeat;}
+  .tabSection .panels .panel .candidatesBG06{background: url('../img/content0606_m.jpg') center no-repeat;}
+  .tabSection .panels .panel .candidatesBG07{background: url('../img/content0707_m.jpg') center no-repeat;}
+
+
   .tabSection .panels .panel .candidatesBG .candi-inner{grid-template-columns:1fr;}
   .tabSection .panels .panel .candidatesBG .candi-content{grid-column:1 / -1; max-width:720px; margin:0 auto;}
   .tabSection .panels .panel .candidatesBG{background-position:center top;}
