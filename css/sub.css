@@ -1,8 +1,8 @@
 /* =========================================================
    0) Utilities / Reset
 ========================================================= */
-.pc_only{display:block;}
-.mo_only{display:none;}
+.pc_only{display:block !important;}
+.mo_only{display:none !important;}
 body{overflow-x:hidden;}
 
 /* =========================================================
@@ -220,8 +220,8 @@ body{overflow-x:hidden;}
   /* 탭 */
   .globalStickySlot .tabs{background:rgba(255,255,255,.92);}
   /* 디바이스 전환 */
-  .pc_only{display:none;}
-  .mo_only{display:block;}
+  .pc_only{display:none !important;}
+  .mo_only{display:block !important;}
 
   /* 수술방법 격자 3열 */
   .tabSection .panels .panel .surgerySteps .steps__grid{

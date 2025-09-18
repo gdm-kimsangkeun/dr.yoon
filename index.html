@@ -21,7 +21,9 @@
     </button>
 
     <!-- 로고 -->
-    <a class="logo" href="#"><b>ELITE</b>&nbsp;성형외과</a>
+    <a class="logo" href="#">
+      <img src="/img/logo.png" alt="">
+    </a>
 
     <div class="spacer"></div>
 
@@ -104,19 +106,30 @@
 <!-- ===== 헤더 제외 전 영역 부모 ===== -->
 <main class="page" id="pageRoot">
   <!-- Hero: Swiper -->
-  <section class="hero">
+  <section class="hero pc_only">
     <div class="swiper" id="heroSwiper">
       <div class="swiper-wrapper">
-        <div class="swiper-slide"><img src="https://picsum.photos/id/1011/1600/800" alt="slide 1"></div>
-        <div class="swiper-slide"><img src="https://picsum.photos/id/1025/1600/800" alt="slide 2"></div>
-        <div class="swiper-slide"><img src="https://picsum.photos/id/1035/1600/800" alt="slide 3"></div>
+        <div class="swiper-slide"><img class="" src="/img/main_slide01_01.jpg" alt="메인슬라이드01"></div>
+        <div class="swiper-slide"><img src="/img/main_slide01_02.jpg" alt="메인슬라이드02"></div>
+        <div class="swiper-slide"><img src="/img/main_slide01_03.jpg" alt="메인슬라이드03"></div>
       </div>
       <div class="swiper-pagination"></div>
       <div class="swiper-button-prev"></div>
       <div class="swiper-button-next"></div>
     </div>
   </section>
-
+  <section class="hero mo_only">
+    <div class="swiper" id="heroSwiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide"><img class="" src="/img/main_slide01_01_m.jpg" alt="메인슬라이드01"></div>
+        <div class="swiper-slide"><img src="/img/main_slide01_02_m.jpg" alt="메인슬라이드02"></div>
+        <div class="swiper-slide"><img src="/img/main_slide01_03_m.jpg" alt="메인슬라이드03"></div>
+      </div>
+      <div class="swiper-pagination"></div>
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-button-next"></div>
+    </div>
+  </section>
   
 
   <!-- 상담바 (CSS sticky) -->
@@ -156,14 +169,18 @@
         지금 닥터윤에서<br>
         <b>가장 인기있는 성형</b>
       </h2>
-      <p class="best-desc">
+      <!-- <p class="best-desc">
         실제 상담과 시술 통계를 바탕으로 선정했어요.<br>
         자연스럽고 세련된 결과를 만나보세요.
-      </p>
+      </p> -->
 
       <div class="best-ctrl">
-        <button class="best-prev" aria-label="이전">‹</button>
-        <button class="best-next" aria-label="다음">›</button>
+        <button class="best-prev" aria-label="이전">
+          <img src="/img/prev.png" alt="이전">
+        </button>
+        <button class="best-next" aria-label="다음">
+          <img src="/img/next.png" alt="다음">
+        </button>
       </div>
     </div>
 
@@ -171,7 +188,7 @@
     <div class="best-slider" id="bestSlider" aria-roledescription="carousel">
       <!-- 카드 1 -->
       <article class="bcard" aria-label="눈성형">
-        <img src="https://images.unsplash.com/photo-1707343843437-caacff5cfa74?q=80&w=1200&auto=format&fit=crop" alt="">
+        <img src="/img/main_slide01_cont01.png" alt="">
         <div class="meta">
           <h4>눈성형</h4>
           <p>자연스럽게 깊이 있는 매력</p>
@@ -179,7 +196,7 @@
       </article>
 
       <article class="bcard" aria-label="코성형">
-        <img src="https://images.unsplash.com/photo-1519345182560-3f2917c472ef?q=80&w=1200&auto=format&fit=crop" alt="">
+        <img src="/img/main_slide01_cont02.png" alt="">
         <div class="meta">
           <h4>코성형</h4>
           <p>밸런스 맞춘 인상형 코성형</p>
@@ -187,7 +204,7 @@
       </article>
 
       <article class="bcard" aria-label="윤곽성형">
-        <img src="https://images.unsplash.com/photo-1512496015851-a90fb38ba796?q=80&w=1200&auto=format&fit=crop" alt="">
+        <img src="/img/main_slide01_cont03.png" alt="">
         <div class="meta">
           <h4>윤곽성형</h4>
           <p>어떤 각도에서도 자연스러운 얼굴선</p>
@@ -195,7 +212,7 @@
       </article>
 
       <article class="bcard" aria-label="리프팅">
-        <img src="https://images.unsplash.com/photo-1544005314-1e4c87c3c3a5?q=80&w=1200&auto=format&fit=crop" alt="">
+        <img src="/img/main_slide01_cont04.png" alt="">
         <div class="meta">
           <h4>리프팅</h4>
           <p>탄탄하게 당기는 V라인</p>
@@ -203,7 +220,7 @@
       </article>
 
       <article class="bcard" aria-label="보톡스·필러">
-        <img src="https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?q=80&w=1200&auto=format&fit=crop" alt="">
+        <img src="/img/main_slide01_cont05.png" alt="">
         <div class="meta">
           <h4>보톡스·필러</h4>
           <p>섬세한 볼륨·주름 개선</p>
@@ -211,7 +228,7 @@
       </article>
 
       <article class="bcard" aria-label="지방성형">
-        <img src="https://images.unsplash.com/photo-1559599101-f09722fb4948?q=80&w=1200&auto=format&fit=crop" alt="">
+        <img src="/img/main_slide01_cont06.png" alt="">
         <div class="meta">
           <h4>지방성형</h4>
           <p>라인을 살리는 바디컨투어링</p>
@@ -226,13 +243,13 @@
   <div class="equip-inner">
     <div class="equip-head">
       <small class="equip-eyebrow">당신만을 위한 맞춤 시술</small>
-      <h2 class="equip-title">닥터윤 <b>시그니처 리프팅</b></h2>
+      <h2 class="equip-title">닥터윤 시그니처 리프팅</h2>
     </div>
 
     <div class="equip-swiper">
       <div class="equip-nav">
-        <button class="equip-btn equip-prev" aria-label="이전">‹</button>
-        <button class="equip-btn equip-next" aria-label="다음">›</button>
+        <button class="equip-btn equip-prev" aria-label="이전"><img src="/img/prev.png" alt="이전"></button>
+        <button class="equip-btn equip-next" aria-label="다음"><img src="/img/next.png" alt="다음"></button>
       </div>
 
       <div class="swiper" id="equipSwiper">
@@ -244,6 +261,7 @@
                 <img src="/img/eqiment01.png" alt="더블로 리프팅">
               </div>
               <h4 class="name">더블로 리프팅</h4>
+              <span></span>
               <p class="desc">리프팅과 주름개선을 동시에</p>
             </article>
           </div>
@@ -251,9 +269,10 @@
           <div class="swiper-slide">
             <article class="device">
               <div class="thumb">
-                <img src="/img/eqiment01.png" alt="프락셀">
+                <img src="" alt="프락셀">
               </div>
               <h4 class="name">프락셀</h4>
+               <span></span>
               <p class="desc">여드름 흉터·잔티 개선, 맑은 피부</p>
             </article>
           </div>
@@ -261,9 +280,10 @@
           <div class="swiper-slide">
             <article class="device">
               <div class="thumb">
-                <img src="/img/eqiment01.png" alt="레이저 토닝">
+                <img src="/img/eqiment03.png" alt="레이저 토닝">
               </div>
               <h4 class="name">레이저 토닝</h4>
+               <span></span>
               <p class="desc">미백과 잡티·기미 개선에 특화</p>
             </article>
           </div>
@@ -271,9 +291,10 @@
           <div class="swiper-slide">
             <article class="device">
               <div class="thumb">
-                <img src="/img/eqiment01.png" alt="12PL">
+                <img src="/img/eqiment04.png" alt="12PL">
               </div>
               <h4 class="name">I2PL</h4>
+               <span></span>
               <p class="desc">미백, 주근, 리프팅<br> 3가지 효과를 동시에</p>
             </article>
           </div>
@@ -281,9 +302,10 @@
           <div class="swiper-slide">
             <article class="device">
               <div class="thumb">
-                <img src="/img/eqiment01.png" alt="써마지">
+                <img src="/img/eqiment05.png" alt="스펙트라필">
               </div>
-              <h4 class="name">써마지</h4>
+              <h4 class="name">스펙트라필</h4>
+               <span></span>
               <p class="desc">탄력 개선과 타이트닝에 강점</p>
             </article>
           </div>
@@ -291,9 +313,32 @@
           <div class="swiper-slide">
             <article class="device">
               <div class="thumb">
-                <img src="/img/eqiment01.png" alt="울쎄라">
+                <img src="/img/eqiment08.png" alt="MTS">
               </div>
-              <h4 class="name">울쎄라</h4>
+              <h4 class="name">MTS</h4>
+               <span></span>
+              <p class="desc">집중 초음파 리프팅, V라인 연출</p>
+            </article>
+          </div>
+          <!-- 7 -->
+           <div class="swiper-slide">
+            <article class="device">
+              <div class="thumb">
+                <img src="/img/eqiment06.png" alt="고주파">
+              </div>
+              <h4 class="name">고주파</h4>
+               <span></span>
+              <p class="desc">집중 초음파 리프팅, V라인 연출</p>
+            </article>
+          </div>
+          <!-- 8 -->
+           <div class="swiper-slide">
+            <article class="device">
+              <div class="thumb">
+                <img src="/img/eqiment07.png" alt="바이탈이온트">
+              </div>
+              <h4 class="name">바이탈이온트</h4>
+               <span></span>
               <p class="desc">집중 초음파 리프팅, V라인 연출</p>
             </article>
           </div>
@@ -305,11 +350,12 @@
 
 
 <section class="content_bg" style="width: 100%; overflow-x: hidden;" >
-    <img src="/img/section_content_bg.jpg" alt="">
+    <img class="pc_only" src="/img/section_content_bg.jpg" alt="">
+    <img class="mo_only" src="/img/section_content_bg_m.jpg" alt="">
 </section>
 
 
-<section class="svc-section">
+<section class="svc-section con_main">
   <div class="svc-inner">
     <div class="svc-head">
       <h2>닥터윤 성형외과의 <b>차별화된 서비스</b></h2>
@@ -325,7 +371,7 @@
         </p>
       </div>
       <div class="svc-media">
-        <img src="https://images.unsplash.com/photo-1584467735871-2a84f154a31b?q=80&w=1600&auto=format&fit=crop" alt="의료진 이미지">
+        <img src="/img/main_footer01.png" alt="실력있는 성형외과 전문의">
       </div>
     </div>
 
@@ -339,7 +385,7 @@
         </p>
       </div>
       <div class="svc-media">
-        <img src="https://images.unsplash.com/photo-1606813907291-76bbd48a1746?q=80&w=1600&auto=format&fit=crop" alt="맞춤 시술 이미지">
+        <img src="/img/main_footer02.png" alt="오직 당신만을 위한 맞춤 수술">
       </div>
     </div>
 
@@ -353,7 +399,7 @@
         </p>
       </div>
       <div class="svc-media">
-        <img src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?q=80&w=1600&auto=format&fit=crop" alt="병원 내부 이미지">
+        <img src="/img/main_footer03.png" alt="결과에 대한 자부심과 책임감">
       </div>
     </div>
   </div>
@@ -388,14 +434,18 @@
     <!-- Right: Info -->
     <aside class="map-right">
       <h2 class="map-title">오시는 길</h2>
-      <p class="map-sub">경기도 부천시 원미구 길주로 189<br>(중동 1033번지 유신빌딩 3층)</p>
+      <p class="map-sub">경기도 부천시 원미구 길주로 189 (중동 1033번지 유신빌딩 3층)</p>
 
       <div class="map-links">
         <a class="map-btn" href="https://map.kakao.com/" target="_blank" rel="noopener">
-          <span class="ico">🟡</span> 카카오 지도
+          <span class="ico">
+            <img src="/img/kakao.png" alt="">
+          </span> 카카오 지도
         </a>
         <a class="map-btn" href="https://map.naver.com/" target="_blank" rel="noopener">
-          <span class="ico">🟢</span> 네이버 지도
+          <span class="ico">
+            <img src="/img/naver.png" alt="">
+          </span> 네이버 지도
         </a>
       </div>
 
@@ -404,6 +454,8 @@
         <a href="tel:0323219022" class="tel">032-321-9022</a>
       </div>
 
+
+      <span class="label hour">진료시간</span>
       <div class="map-hours">
         <div class="row">
           <b>월요일~목요일</b><span>10:30 ~ 19:00</span>
@@ -428,6 +480,9 @@
 <!-- ================= Footer ================= -->
 <footer class="site-footer simple">
   <div class="foot-inner">
+     <div class="logo" style="margin-bottom: 20px;">
+          <img src="/img/f_logo.png" alt="">
+      </div>
     <p class="foot-row">
       <span class="label">주소:</span>
       <span class="val">경기도 부천시 원미구 길주로 189(중동 1033번지 우신빌딩 3층)</span>
