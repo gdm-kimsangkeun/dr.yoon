@@ -114,10 +114,10 @@ body{overflow-x:hidden;}
   background:#fff;
 }
 .section01__inner{width:100%; margin:0 auto; display:grid; grid-template-columns:1fr; gap:clamp(20px, 4vw, 56px); align-items:center;}
-.section01__media{margin:0;}
+.section01__media{margin: 0; margin-top:40px;}
 .section01__media img{width:100%; height:clamp(220px,45vw,460px); object-fit:cover; border-radius:16px; display:block; background:#f3f5f7;}
 .section01__text{margin-left:0;}
-.eyebrow{font-size:20px; color:#ff5aa5; letter-spacing:.02em; margin:2px 0 10px;}
+.eyebrow{font-size:20px; color:#ff5aa5; letter-spacing:.02em; margin:2px 0 10px; font-weight: 700;}
 .section01__title{font-size:clamp(24px,3.4vw,40px); line-height:1.5; letter-spacing:-.02em; margin:0 0 14px; font-weight:400;}
 .section01__title strong{font-weight:800;}
 .section01__desc{color:#8a8f98; font-size:clamp(14px,1.6vw,16px); line-height:1.7; margin:0 0 20px;}
@@ -147,11 +147,15 @@ body{overflow-x:hidden;}
   width:min(92vw, 1400px); max-width:1400px;
   display:grid; grid-template-columns:repeat(4, minmax(0,1fr)); gap:clamp(16px, 2.4vw, 28px);
 }
+.tabSection .panels .panel .surgerySteps .steps__grid.nose01_step{grid-template-columns:repeat(3, minmax(0,1fr));}
+.tabSection .panels .panel .surgerySteps .steps__grid.nose02_step{grid-template-columns:repeat(2, minmax(0,1fr));}
 .tabSection .panels .panel .surgerySteps .stepCard{background:#fff; border-radius:16px; overflow:hidden; box-shadow:0 3px 12px rgba(0,0,0,.06); transition:transform .2s, box-shadow .2s;}
 .tabSection .panels .panel .surgerySteps .stepCard:hover{transform:translateY(-2px); box-shadow:0 10px 28px rgba(0,0,0,.10);}
 .tabSection .panels .panel .surgerySteps .stepCard__media{aspect-ratio:4/3; width:100%; overflow:hidden; display:block;}
 .tabSection .panels .panel .surgerySteps .stepCard__media img{width:100%; height:100%; object-fit:cover; display:block;}
 .tabSection .panels .panel .surgerySteps .stepCard__bar{background:#151515; color:#fff; display:flex; align-items:center; gap:10px; padding:14px 18px; font-size:16px;}
+.tabSection .panels .panel .surgerySteps .nose02_step .stepCard__bar{justify-content: center;}
+.tabSection .panels .panel .surgerySteps .nose02_step .txt{display: block; background: #151515; color: #fff; padding: 0 18px 14px 18px; padding-bottom: 14px;}
 .tabSection .panels .panel .surgerySteps .stepCard__bar .point{color:#ff5aa5; font-weight:700;}
 .tabSection .panels .panel .surgerySteps .stepCard__bar .point::after{content:""; display:inline-block; width:1px; height:14px; background:rgba(255,255,255,.18); margin:0 10px 0 12px;}
 
@@ -173,12 +177,29 @@ body{overflow-x:hidden;}
   padding:clamp(48px, 6vw, 130px) 0;
   color:#1a140e; font-family:Pretendard, system-ui, "Noto Sans KR", sans-serif; box-sizing:border-box;
 }
+
+
+
 .tabSection .panels .panel .candidatesBG02{background: url('../img/content0202.png');}
 .tabSection .panels .panel .candidatesBG03{background: url('../img/content0303.png');}
 .tabSection .panels .panel .candidatesBG04{background: url('../img/content0404.png');}
 .tabSection .panels .panel .candidatesBG05{background: url('../img/content0505.png');}
 .tabSection .panels .panel .candidatesBG06{background: url('../img/content0606.png');}
 .tabSection .panels .panel .candidatesBG07{background: url('../img/content0707.png');}
+
+
+.tabSection .panels .panel .candidatesBG_nose01{background: url('../img/nose_content0101.png');}
+.tabSection .panels .panel .candidatesBG_nose02{background: url('../img/nose_content0202.png');}
+.tabSection .panels .panel .candidatesBG_nose03{background: url('../img/nose_content0303.png');}
+.tabSection .panels .panel .candidatesBG_nose04{background: url('../img/nose_content0404.png');}
+.tabSection .panels .panel .candidatesBG_nose05{background: url('../img/nose_content0505.png');}
+.tabSection .panels .panel .candidatesBG_nose06{background: url('../img/nose_content0606.png');}
+.tabSection .panels .panel .candidatesBG_nose07{background: url('../img/nose_content0707.png');}
+
+
+
+
+
 
 
 .tabSection .panels .panel .candidatesBG .candi-inner{
@@ -230,13 +251,14 @@ body{overflow-x:hidden;}
   /* 디바이스 전환 */
   .pc_only{display:none !important;}
   .mo_only{display:block !important;}
-
+  
   /* 수술방법 격자 3열 */
   .tabSection .panels .panel .surgerySteps .steps__grid{
-    grid-template-columns:repeat(2, minmax(0,1fr));
-    
+    grid-template-columns:repeat(2, minmax(0,1fr)) !important;
   }
-
+  .tabSection .panels .panel .surgerySteps .steps__grid.steps__grid.nose02_step{
+    grid-template-columns:repeat(1, minmax(0,1fr)) !important;
+  }
   /* Candidates 한 열 */
   .tabSection .panels .panel .candidatesBG01{background: url('../img/content0101_m.jpg') center no-repeat;}
   .tabSection .panels .panel .candidatesBG02{background: url('../img/content0202_m.jpg') center no-repeat;}
@@ -245,6 +267,14 @@ body{overflow-x:hidden;}
   .tabSection .panels .panel .candidatesBG05{background: url('../img/content0505_m.jpg') center no-repeat;}
   .tabSection .panels .panel .candidatesBG06{background: url('../img/content0606_m.jpg') center no-repeat;}
   .tabSection .panels .panel .candidatesBG07{background: url('../img/content0707_m.jpg') center no-repeat;}
+
+  .tabSection .panels .panel .candidatesBG_nose01{background: url('../img/nose_content0101_m.jpg') center no-repeat;}
+  .tabSection .panels .panel .candidatesBG_nose02{background: url('../img/nose_content0202_m.jpg') center no-repeat;}
+  .tabSection .panels .panel .candidatesBG_nose03{background: url('../img/nose_content0303_m.jpg') center no-repeat;}
+  .tabSection .panels .panel .candidatesBG_nose04{background: url('../img/nose_content0404_m.jpg') center no-repeat;}
+  .tabSection .panels .panel .candidatesBG_nose05{background: url('../img/nose_content0505_m.jpg') center no-repeat;}
+  .tabSection .panels .panel .candidatesBG_nose06{background: url('../img/nose_content0606_m.jpg') center no-repeat;}
+  .tabSection .panels .panel .candidatesBG_nose07{background: url('../img/nose_content0707_m.jpg') center no-repeat;}
 
 
   .tabSection .panels .panel .candidatesBG .candi-inner{grid-template-columns:1fr;}
