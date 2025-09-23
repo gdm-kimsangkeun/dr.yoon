@@ -204,7 +204,10 @@ body{overflow-x:hidden;}
 .tabSection .panels .panel .candidatesBG_chest03{background: url('../img/chest_content0303.png');}
 .tabSection .panels .panel .candidatesBG_chest04{background: url('../img/chest_content0404.png');}
 
-
+.tabSection .panels .panel .candidatesBG_body01{background: url('../img/body_content0101.png');}
+.tabSection .panels .panel .candidatesBG_body02{background: url('../img/body_content0202.png');}
+.tabSection .panels .panel .candidatesBG_body03{background: url('../img/body_content0303.png');}
+.tabSection .panels .panel .candidatesBG_body_middle01{background: url('../img/body_middle.png'); height: 955px;}
 
 
 
@@ -284,10 +287,16 @@ body{overflow-x:hidden;}
 
   .tabSection .panels .panel .candidatesBG_face01{background: url('../img/face_content0101_m.jpg') center no-repeat;}
 
-  .tabSection .panels .panel .candidatesBG_chest01{background: url('../img/chest_content0101_m.jpg');}
-  .tabSection .panels .panel .candidatesBG_chest02{background: url('../img/chest_content0202_m.jpg');}
-  .tabSection .panels .panel .candidatesBG_chest03{background: url('../img/chest_content0303_m.jpg');}
-  .tabSection .panels .panel .candidatesBG_chest04{background: url('../img/chest_content0404_m.jpg');}
+  .tabSection .panels .panel .candidatesBG_chest01{background: url('../img/chest_content0101_m.jpg') center no-repeat;}
+  .tabSection .panels .panel .candidatesBG_chest02{background: url('../img/chest_content0202_m.jpg') center no-repeat;}
+  .tabSection .panels .panel .candidatesBG_chest03{background: url('../img/chest_content0303_m.jpg') center no-repeat;}
+  .tabSection .panels .panel .candidatesBG_chest04{background: url('../img/chest_content0404_m.jpg') center no-repeat;}
+
+
+  .tabSection .panels .panel .candidatesBG_body01{background: url('../img/body_content0101_m.jpg') center no-repeat;}
+  .tabSection .panels .panel .candidatesBG_body02{background: url('../img/body_content0202_m.jpg') center no-repeat;}
+  .tabSection .panels .panel .candidatesBG_body03{background: url('../img/body_content0303_m.jpg') center no-repeat;}  
+  .tabSection .panels .panel .candidatesBG_body_middle01{background: url('../img/body_middle_m.jpg') center no-repeat; height: 600px;}
 
   .tabSection .panels .panel .candidatesBG .candi-inner{grid-template-columns:1fr;}
   .tabSection .panels .panel .candidatesBG .candi-content{grid-column:1 / -1; max-width:720px; margin:0 auto;}
