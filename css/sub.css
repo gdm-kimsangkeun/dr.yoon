@@ -296,7 +296,7 @@ body{overflow-x:hidden;}
   .tabSection .panels .panel .candidatesBG_body01{background: url('../img/body_content0101_m.jpg') center no-repeat;}
   .tabSection .panels .panel .candidatesBG_body02{background: url('../img/body_content0202_m.jpg') center no-repeat;}
   .tabSection .panels .panel .candidatesBG_body03{background: url('../img/body_content0303_m.jpg') center no-repeat;}  
-  .tabSection .panels .panel .candidatesBG_body_middle01{background: url('../img/body_middle_m.jpg') center no-repeat; height: 600px;}
+  .tabSection .panels .panel .candidatesBG_body_middle01{background: none; height: auto; padding: 0;}
 
   .tabSection .panels .panel .candidatesBG .candi-inner{grid-template-columns:1fr;}
   .tabSection .panels .panel .candidatesBG .candi-content{grid-column:1 / -1; max-width:720px; margin:0 auto;}
