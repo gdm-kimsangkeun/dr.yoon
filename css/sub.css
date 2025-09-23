@@ -133,6 +133,7 @@ body{overflow-x:hidden;}
   position:relative; width:100vw; left:50%; margin-left:-50vw; right:auto; margin-right:0; font-weight: 600;
   color:#111; font-family:Pretendard, -apple-system, "Noto Sans KR", sans-serif; box-sizing:border-box;
 }
+.tabSection .panels .panel .surgerySteps.surgerySteps01{padding: 150px 0 0 0;}
 .tabSection .panels .panel .surgerySteps .steps__head{
   width:min(92vw, 980px); margin:0 auto 60px; text-align:center;
 }
@@ -196,7 +197,12 @@ body{overflow-x:hidden;}
 .tabSection .panels .panel .candidatesBG_nose06{background: url('../img/nose_content0606.png');}
 .tabSection .panels .panel .candidatesBG_nose07{background: url('../img/nose_content0707.png');}
 
+.tabSection .panels .panel .candidatesBG_face01{background: url('../img/face_content0101.png');}
 
+.tabSection .panels .panel .candidatesBG_chest01{background: url('../img/chest_content0101.png');}
+.tabSection .panels .panel .candidatesBG_chest02{background: url('../img/chest_content0202.png');}
+.tabSection .panels .panel .candidatesBG_chest03{background: url('../img/chest_content0303.png');}
+.tabSection .panels .panel .candidatesBG_chest04{background: url('../img/chest_content0404.png');}
 
 
 
@@ -276,6 +282,12 @@ body{overflow-x:hidden;}
   .tabSection .panels .panel .candidatesBG_nose06{background: url('../img/nose_content0606_m.jpg') center no-repeat;}
   .tabSection .panels .panel .candidatesBG_nose07{background: url('../img/nose_content0707_m.jpg') center no-repeat;}
 
+  .tabSection .panels .panel .candidatesBG_face01{background: url('../img/face_content0101_m.jpg') center no-repeat;}
+
+  .tabSection .panels .panel .candidatesBG_chest01{background: url('../img/chest_content0101_m.jpg');}
+  .tabSection .panels .panel .candidatesBG_chest02{background: url('../img/chest_content0202_m.jpg');}
+  .tabSection .panels .panel .candidatesBG_chest03{background: url('../img/chest_content0303_m.jpg');}
+  .tabSection .panels .panel .candidatesBG_chest04{background: url('../img/chest_content0404_m.jpg');}
 
   .tabSection .panels .panel .candidatesBG .candi-inner{grid-template-columns:1fr;}
   .tabSection .panels .panel .candidatesBG .candi-content{grid-column:1 / -1; max-width:720px; margin:0 auto;}
@@ -291,6 +303,7 @@ body{overflow-x:hidden;}
   .panels{width: 100%;}
   .panel__desc{padding: 20px 0 60px;}
   .tabSection .panels .panel .surgerySteps{padding: 60px 0;}
+  .tabSection .panels .panel .surgerySteps.surgerySteps01{padding: 60px 0 0 0 ;}
   .tabSection .panels .panel .surgerySteps .stepCard__bar{font-size: 2.5vw;}
   .tabSection .panels .panel .candidatesBG .candi-title{font-size: 22px;}
   .tabSection .panels .panel .candidatesBG .candi-list li{font-size: 16px;}
