@@ -197,7 +197,7 @@
         <section class="section01">
             <div class="section01__inner">
                 <!-- Image block -->
-                <figure class="section01__media">
+                <figure class="section01__media section01__media_01">
                     <!-- 필요 시 <source>로 webp 추가 가능 -->
                     <img src="/img/skin_top.png" alt="슬림한 라인과 볼륨감을 함께 만드는 바디 솔루션"
                         loading="eager" decoding="async" />
@@ -285,7 +285,7 @@
                             </li>
                             <li>
                                 <span class="ico" aria-hidden="true">
-                                    <img src="/img/icon03.png" alt="입원 아이콘">
+                                    <img src="/img/icon05.png" alt="입원 아이콘">
                                 </span>
                                 <div class="txt">
                                     <em class="k">회복기간</em><br>
@@ -356,7 +356,7 @@
                             </li>
                             <li>
                                 <span class="ico" aria-hidden="true">
-                                    <img src="/img/icon03.png" alt="입원치료 아이콘">
+                                    <img src="/img/icon05.png" alt="입원치료 아이콘">
                                 </span>
                                 <div class="txt">
                                     <em class="k">회복기간</em>
@@ -383,11 +383,11 @@
                         </div>
                     </section>
 
-  <!-- Q&A Accordion Tabs (Responsive / 1400px 컨테이너 / One-open) -->
+  <!-- Q&A -->
 <section class="faq-wrap" aria-label="프락셀 Q&A">
-  <h2 class="faq-title">프락셀 Q&amp;A</h2>
+  <h2 data-aos="fade-up" class="faq-title">프락셀 Q&amp;A</h2>
 
-  <div class="faq" id="faq">
+  <div class="faq" id="faq" data-aos="fade-up">
     <!-- item 1 -->
     <article class="faq-item">
       <button class="faq-q" id="q1" aria-expanded="false" aria-controls="a1" type="button">
@@ -432,20 +432,33 @@
                 </section>
                 
                 <section class="panel" role="tabpanel" id="panel-front" aria-labelledby="tab-front" hidden>
-                    <h3 class="panel__title" data-aos="fade-up">액취증</h3>
-                    <p class="panel__desc" data-aos="fade-up">
-                        액취증은 아포크린 땀샘의 과다·이상 분비로 특이한 역취가 발생하는 질환으로, 고온다습한 환경·운동 후 악화되며 동아시아권에서 가족력 빈도가 높지만 약 20%는 비유전적으로 발현됩니다. <br class="pc_only">
-                        지속될 경우 대인관계·사회활동에 장애와 정신적 스트레스를 유발하므로, 증상 정도에 따라 보존적 치료부터 땀샘 제거 수술까지 단계적 관리가 필요합니다.
-                    </p>
+                    <div class="body_content_box">
+                        <div data-aos="fade-up">
+                            <img src="/img/skin_content03.png" alt="레이저토닝 장비">
+                        </div>
+                        <div class="txt_box" data-aos="fade-up">
+                            <h3 class="title">레이저토닝</h3>
+                            <p class="txt">
+                                마이크로 단위의 81개 프락셔널 레이저 빔이 멜라닌 색소를 쪼개어 림프 순환을 통해 배출시키는 시술입니다. 
+                                짧은 시간 동안 고르게 에너지를 조사해 피부 손상을 최소화하며, 색소 질환은 물론 콜라겐 생성을 촉진해 탄력,
+                                미백, 피부 재생, 모공 축소, 여드름 치료까지 폭넓게 개선합니다.
+                            </p>
+                            <div class="flex_box">
+                                <span>#피부톤 개선</span>
+                                <span>#잔주름 개선</span>
+                                <span>#기미 색소 치료까지</span>
+                            </div>
+                        </div>
+                    </div>
                     <section class="infoBar" >
-                        <ul class="infoGrid" data-aos="fade-up">
+                        <ul class="infoGrid infoGrid_skin" data-aos="fade-up">
                             <li>
                                 <span class="ico" aria-hidden="true">
                                     <img src="/img/icon01.png" alt="수술시간 아이콘">
                                 </span>
                                 <div class="txt">
                                     <em class="k">수술시간</em>
-                                    <strong class="v">1시간</strong>
+                                    <strong class="v">10-15분</strong>
                                 </div>
                             </li>
                             <li>
@@ -454,74 +467,106 @@
                                 </span>
                                 <div class="txt">
                                     <em class="k">마취방법</em>
-                                    <strong class="v">국소/수면마취</strong>
+                                    <strong class="v">없음</strong>
                                 </div>
                             </li>
                             <li>
                                 <span class="ico" aria-hidden="true">
-                                    <img src="/img/icon03.png" alt="입원치료 아이콘">
-                                </span>
-                                <div class="txt">
-                                    <em class="k">입원치료</em>
-                                    <strong class="v">불필요</strong>
-                                </div>
-                            </li>
-                            <li>
-                                <span class="ico" aria-hidden="true">
-                                    <img src="/img/icon04.png" alt="실밥제거 아이콘">
-                                </span>
-                                <div class="txt">
-                                    <em class="k">실밥제거</em>
-                                    <strong class="v">7일</strong>
-                                </div>
-                            </li>
-                            <li>
-                                <span class="ico" aria-hidden="true">
-                                    <img src="/img/icon05.png" alt="회복기간 아이콘">
+                                    <img src="/img/icon05.png" alt="회복 아이콘">
                                 </span>
                                 <div class="txt">
                                     <em class="k">회복기간</em>
-                                    <strong class="v">5-7일</strong>
+                                    <strong class="v">즉시 생활가능</strong>
                                 </div>
                             </li>
                         </ul>
                     </section>
 
                     <!-- 탭 패널 안에 넣으세요 -->
-                    <section class="candidatesBG candidatesBG_body03">
+                    <section class="candidatesBG candidatesBG_skin03" >
                         <div class="candi-inner">
                             <div class="candi-content">
-                                <h4 class="candi-title" data-aos="fade-up"><b>액취증</b> 시술대상</h4>
+                                <h4 style="color: #fff;" class="candi-title" data-aos="fade-up"><b>레이저토닝</b> 시술대상</h4>
 
-                                <ul class="candi-list" data-aos="fade-up">
-                                    <li>액취증 냄새로 인해 생활에 영향을 받는 경우</li>
-                                    <li>티슈를 겨드랑이에 끼웠을 때 냄새가 심한 경우</li>
-                                    <li>밝은 색상 옷을 입고 겨드랑이 부분이 노랗게 변색되는 경우</li>
-                                    <li>직계가족 중 액취증 증세를 보이는 경우</li>
+                                <ul class="candi-list" data-aos="fade-up" >
+                                    <li style="color: #fff;">기미, 주근깨 등 색소침착이 심한 경우</li>
+                                    <li style="color: #fff;">피부의 탄력이 떨어진 경우</li>
+                                    <li style="color: #fff;">화농성 여드름으로 고민인 경우</li>
+                                    <li style="color: #fff;">넓어진 모공으로 고민인 경우</li>
                                 </ul>
                             </div>
                         </div>
                     </section>
 
+                     <!-- Q&A -->
+<section class="faq-wrap" aria-label="레이저토닝 Q&A">
+  <h2 data-aos="fade-up" class="faq-title">레이저토닝 Q&amp;A</h2>
 
+  <div class="faq" id="faq01" data-aos="fade-up">
+    <!-- item 1 -->
+    <article class="faq-item">
+      <button class="faq-q" id="q1" aria-expanded="false" aria-controls="a1" type="button">
+        <span class="faq-q__text">레이저토닝은 몇 회를 받아야 하나요?</span>
+        <span class="faq-q__pm" aria-hidden="true"></span>
+      </button>
+      <div class="faq-a" role="region" id="a1" aria-labelledby="q1">
+        1-2주 간격으로 5-10회 정도 시술 후 4-8주 간격의 유지치료가 필요합니다.
+      </div>
+    </article>
+
+    <!-- item 2 -->
+    <article class="faq-item">
+      <button class="faq-q" id="q2" aria-expanded="false" aria-controls="a2" type="button">
+        <span class="faq-q__text">효과는 언제쯤 확인할 수 있나요?</span>
+        <span class="faq-q__pm" aria-hidden="true"></span>
+      </button>
+      <div class="faq-a" role="region" id="a2" aria-labelledby="q2">
+        개인차가 있지만 보통 1회차 시술 후 3일 정도 되면 피부가 맑아지는 것을 느낄 수 있으며 3~4회차 이후에 좋아지는 경우도 있습니다.
+      </div>
+    </article>
+
+    <!-- item 3 -->
+    <article class="faq-item">
+      <button class="faq-q" id="q3" aria-expanded="false" aria-controls="a3" type="button">
+        <span class="faq-q__text">레이저토닝 시술 후 주의할 점은 무엇인가요?</span>
+        <span class="faq-q__pm" aria-hidden="true"></span>
+      </button>
+      <div class="faq-a" role="region" id="a3" aria-labelledby="q3">
+        시술 후 피부가 건조해질 수 있으므로 충분한 수분섭취 및 수분크림과 썬크림을 발라 자외선을 차단해주세요.
+      </div>
+    </article>
+  </div>
+</section>
                 </section>
 
                 <section class="panel" role="tabpanel" id="panel-correction" aria-labelledby="tab-correction" hidden>
-                    <h3 class="panel__title" data-aos="fade-up">여유증</h3>
-                    <p class="panel__desc" data-aos="fade-up">
-                        남성의 가슴이 여성의 유방처럼 봉긋해 보이는 것을 여성형유방이라고 합니다. 체네에 여성 호르몬이 증가하거나 남성 호르몬이 감소한느 불균형 때문에 <br class="pc_only">
-                        유선 조직의 과대발달과 지방 과다축적으로 인해 나타나는 것으로 그에 대한 정확한 원인을 찾는 것이 가장 중요합니다.
-                        
-                    </p>
+                    <div class="body_content_box">
+                        <div data-aos="fade-up">
+                            <img src="/img/skin_content04.png" alt="I2PL 장비">
+                        </div>
+                        <div class="txt_box" data-aos="fade-up">
+                            <h3 class="title">I2PL</h3>
+                            <p class="txt">
+                               I2PL은 2세대 IPL로, 효과적인 파장만 선택 조사해 색소, 홍조, 모공 등 다양한 피부 문제를
+                               동시에 개선하는 레이저입니다. 이중차단 필터로 통증이 거의 없고 넓은 부위를 빠르게 치료까지 할 
+                               수 있으며, 시술 후 바로 일상생활이 가능합니다.
+                            </p>
+                            <div class="flex_box">
+                                <span>#화이트닝</span>
+                                <span>#홍조 개선</span>
+                                <span>#잔주름 개선</span>
+                            </div>
+                        </div>
+                    </div>
                     <section class="infoBar" >
-                        <ul class="infoGrid" data-aos="fade-up">
+                        <ul class="infoGrid infoGrid_skin" data-aos="fade-up">
                             <li>
                                 <span class="ico" aria-hidden="true">
                                     <img src="/img/icon01.png" alt="수술시간 아이콘">
                                 </span>
                                 <div class="txt">
                                     <em class="k">수술시간</em>
-                                    <strong class="v">1시간</strong>
+                                    <strong class="v">20-30분</strong>
                                 </div>
                             </li>
                             <li>
@@ -530,25 +575,7 @@
                                 </span>
                                 <div class="txt">
                                     <em class="k">마취방법</em>
-                                    <strong class="v">국소/수면마취</strong>
-                                </div>
-                            </li>
-                            <li>
-                                <span class="ico" aria-hidden="true">
-                                    <img src="/img/icon03.png" alt="입원치료 아이콘">
-                                </span>
-                                <div class="txt">
-                                    <em class="k">입원치료</em>
-                                    <strong class="v">불필요</strong>
-                                </div>
-                            </li>
-                            <li>
-                                <span class="ico" aria-hidden="true">
-                                    <img src="/img/icon04.png" alt="실밥제거 아이콘">
-                                </span>
-                                <div class="txt">
-                                    <em class="k">실밥제거</em>
-                                    <strong class="v">7일 후</strong>
+                                    <strong class="v">없음</strong>
                                 </div>
                             </li>
                             <li>
@@ -557,48 +584,96 @@
                                 </span>
                                 <div class="txt">
                                     <em class="k">회복기간</em>
-                                    <strong class="v">10일</strong>
+                                    <strong class="v">1-2일</strong>
                                 </div>
                             </li>
                         </ul>
                     </section>
                     <!-- 탭 패널 안에 넣으세요 -->
-                    <section class="candidatesBG candidatesBG_chest04">
+                    <section class="candidatesBG candidatesBG_skin04">
                         <div class="candi-inner">
                             <div class="candi-content">
-                                <h4 class="candi-title" data-aos="fade-up"><b>여유증</b> 수술대상</h4>
+                                <h4 class="candi-title" data-aos="fade-up"><b>I2PL</b> 수술대상</h4>
 
                                 <ul class="candi-list" data-aos="fade-up">
-                                    <li>여성 가슴처럼 돌출되어 있었던 경우</li>
-                                    <li>가슴 주변만 볼록하게 돌출된 경우</li>
-                                    <li>가슴 몽우리가 느껴지며 가슴 양쪽이 비대칭인 경우</li>
-                                    <li>체중은 줄었지만 가슴 주변의 체지방 변화가 없는 경우</li>
+                                    <li>기미, 주근깨 등 색소침착이 심한 경우</li>
+                                    <li>얼굴에 잔주름이 많고 피부 탄력이 떨어진 경우</li>
+                                    <li>안면홍조 및 모세혈관 확장증이 있는 경우</li>
+                                    <li>콜라겐 생성이 필요한 경우</li>
                                 </ul>
                             </div>
                         </div>
                     </section>
 
+<section class="faq-wrap" aria-label="I2PL Q&A">
+  <h2 data-aos="fade-up" class="faq-title">I2PL Q&amp;A</h2>
 
+  <div class="faq" id="faq01" data-aos="fade-up">
+    <!-- item 1 -->
+    <article class="faq-item">
+      <button class="faq-q" id="q1" aria-expanded="false" aria-controls="a1" type="button">
+        <span class="faq-q__text">I2PL은 몇 회를 받아야 하나요?</span>
+        <span class="faq-q__pm" aria-hidden="true"></span>
+      </button>
+      <div class="faq-a" role="region" id="a1" aria-labelledby="q1">
+        평균 3-4주 간격으로 3-5회의 치료로 피부 개선 효과를 확인할 수 있습니다.
+      </div>
+    </article>
+
+    <!-- item 2 -->
+    <article class="faq-item">
+      <button class="faq-q" id="q2" aria-expanded="false" aria-controls="a2" type="button">
+        <span class="faq-q__text">효과는 언제쯤 확인할 수 있나요?</span>
+        <span class="faq-q__pm" aria-hidden="true"></span>
+      </button>
+      <div class="faq-a" role="region" id="a2" aria-labelledby="q2">
+        주근깨나 잡티 등의 색소부위는 시술전보다 일시적으로 더 진해보일 수 있으나 점차 흐려지며 시술을 받을 때마다 서서히 좋아집니다.
+      </div>
+    </article>
+
+    <!-- item 3 -->
+    <article class="faq-item">
+      <button class="faq-q" id="q3" aria-expanded="false" aria-controls="a3" type="button">
+        <span class="faq-q__text">I2PL 시술 후 주의할 점은 무엇인가요?</span>
+        <span class="faq-q__pm" aria-hidden="true"></span>
+      </button>
+      <div class="faq-a" role="region" id="a3" aria-labelledby="q3">
+        시술 후 피부가 건조해질 수 있으므로 충분한 수분 섭취와 수분크림을 바르고 자외선차단제는 필수적으로 사용해야 합니다.
+      </div>
+    </article>
+  </div>
+</section>
                 </section>
 
                 <section class="panel" role="tabpanel" id="panel-nonincision" aria-labelledby="tab-nonincision" hidden>
-                    <h3 class="panel__title" data-aos="fade-up">비절개 눈매교정</h3>
-                    <p class="panel__desc" data-aos="fade-up">
-                      눈을 뜨는 힘이 약한 경우 눈매교정 없이 쌍거풀 수술만 진행하게 되면 쌍꺼풀 라인이 부자연스럽고 시간이 지난 후 풀릴 수 있으며<br class="pc_only">
-                      눈꺼풀은 그대로 눈동자를 가리고 있어 수술 전 보다는 눈이 더 작아 보입니다. 비절개 눈매교정은 안검하수를 절개없이 자연스럽고 또렷한 눈매로 교정하는 수술로<br class="pc_only">
-                      눈꺼풀에 지방이 적당하고 눈꺼풀이 얇은 눈에 효과적입니다. 닥터윤 비절개 눈매교정은 근육의 일부를 묶어 길이를 줄여주어<br class="pc_only">
-                      눈을 뜨는 힘을 강하게 만들고 시원하고 또렷한 눈매로 개선합니다. 이중매듭으로 잘 풀리지 않고 반영구적인 효과가 있는 눈매교정술입니다
-                        
-                    </p>
+                    <div class="body_content_box">
+                        <div data-aos="fade-up">
+                            <img src="/img/skin_content04.png" alt="고주파 장비">
+                        </div>
+                        <div class="txt_box" data-aos="fade-up">
+                            <h3 class="title">고주파</h3>
+                            <p class="txt">
+                                고주파 전류가 인체 내에 통전될 때 조직에서 생체열에너지가 발생하는 원리를 활용한 지방분해술입니다.
+                                인체에 무해한 고주파가 몸에서 심부열(생체열) 발생을 유도하여 혈류량과 산소유입량을 증가시켜 피부 속
+                                콜라겐을 합성하고 증가시켜 피부와 근육의 탄력을 증진시켜 리프팅 효과를 주며 체지방 분해 및 셀룰라이트 
+                                연소 작용을 일으켜 사이즈가 감소하는 현상이 일어나는 원리입니다.
+                            </p>
+                            <div class="flex_box">
+                                <span>#잔주름 개선</span>
+                                <span>#잡티 제거</span>
+                                <span>#여드름 개선</span>
+                            </div>
+                        </div>
+                    </div>
                     <section class="infoBar" >
-                        <ul class="infoGrid" data-aos="fade-up">
+                        <ul class="infoGrid infoGrid_skin" data-aos="fade-up">
                             <li>
                                 <span class="ico" aria-hidden="true">
                                     <img src="/img/icon01.png" alt="수술시간 아이콘">
                                 </span>
                                 <div class="txt">
                                     <em class="k">수술시간</em>
-                                    <strong class="v">30분-1시간</strong>
+                                    <strong class="v">20-30분</strong>
                                 </div>
                             </li>
                             <li>
@@ -607,7 +682,7 @@
                                 </span>
                                 <div class="txt">
                                     <em class="k">마취방법</em>
-                                    <strong class="v">부분마취</strong>
+                                    <strong class="v">없음</strong>
                                 </div>
                             </li>
                             <li>
@@ -615,96 +690,24 @@
                                     <img src="/img/icon03.png" alt="입원치료 아이콘">
                                 </span>
                                 <div class="txt">
-                                    <em class="k">입원치료</em>
-                                    <strong class="v">불필요</strong>
-                                </div>
-                            </li>
-                            <li>
-                                <span class="ico" aria-hidden="true">
-                                    <img src="/img/icon04.png" alt="실밥제거 아이콘">
-                                </span>
-                                <div class="txt">
-                                    <em class="k">실밥제거</em>
-                                    <strong class="v">불필요</strong>
-                                </div>
-                            </li>
-                            <li>
-                                <span class="ico" aria-hidden="true">
-                                    <img src="/img/icon05.png" alt="회복기간 아이콘">
-                                </span>
-                                <div class="txt">
                                     <em class="k">회복기간</em>
-                                    <strong class="v">3-5일</strong>
+                                    <strong class="v">즉시 생활가능</strong>
                                 </div>
                             </li>
                         </ul>
                     </section>
-                    <!-- ▼ 패널 안 원하는 위치에 삽입 (infoBar 위/아래 아무 곳) -->
-                    <section class="surgerySteps">
-                        <div class="steps__head">
-                            <h4 class="steps__title" data-aos="fade-up">수술방법</h4>
-                            <p class="steps__desc" data-aos="fade-up">
-                                개인의 눈꺼풀의 두께와 지방의 정도, 눈꺼풀 처짐 정도 틀을 고려한 개인별 맞춤 수술을 진행하여 자연스럽고 또렷한 눈매를 완성합니다.
-                            </p>
-                        </div>
 
-                        <ul class="steps__grid" data-aos="fade-up">
-                            <!-- 01 -->
-                            <li class="stepCard">
-                                <div class="stepCard__media">
-                                    <img src="/img/method_s5_01.png" alt="홈 생성 및 조직 제거">
-                                </div>
-                                <div class="stepCard__bar">
-                                    <span class="point">Point 01</span>
-                                    <span class="label">홈 생성 및<br class="mo_only"> 조직 제거</span>
-                                </div>
-                            </li>
-
-                            <!-- 02 -->
-                            <li class="stepCard">
-                                <div class="stepCard__media">
-                                    <img src="/img/method_s5_02.png" alt="라인 디자인">
-                                </div>
-                                <div class="stepCard__bar">
-                                    <span class="point">Point 02</span>
-                                    <span class="label">라인<br class="mo_only"> 디자인</span>
-                                </div>
-                            </li>
-
-                            <!-- 03 -->
-                            <li class="stepCard">
-                                <div class="stepCard__media">
-                                    <img src="/img/method_s5_03.png" alt="근육 묶기">
-                                </div>
-                                <div class="stepCard__bar">
-                                    <span class="point">Point 03</span>
-                                    <span class="label">근육 묶기</span>
-                                </div>
-                            </li>
-
-                            <!-- 04 -->
-                            <li class="stepCard">
-                                <div class="stepCard__media">
-                                    <img src="/img/method_s5_04.png" alt="수술 완료">
-                                </div>
-                                <div class="stepCard__bar">
-                                    <span class="point">Point 04</span>
-                                    <span class="label">수술 완료</span>
-                                </div>
-                            </li>
-                        </ul>
-                    </section>
                     <!-- 탭 패널 안에 넣으세요 -->
-                    <section class="candidatesBG candidatesBG05">
+                    <section class="candidatesBG candidatesBG_skin05">
                         <div class="candi-inner">
                             <div class="candi-content">
-                                <h4 class="candi-title" data-aos="fade-up"><b>비절개 눈매교정</b> 수술대상</h4>
+                                <h4 class="candi-title" data-aos="fade-up"><b>고주파</b> 수술대상</h4>
 
                                 <ul class="candi-list" data-aos="fade-up">
-                                    <li>눈이 흐릿하고 처져 졸려보이는 경우</li>
-                                    <li>눈꺼풀이 처져 눈동자를 가리는 경우</li>
-                                    <li>쌍꺼풀 테이프의 장기간 사용으로 늘어진 경우</li>
-                                    <li>수술 없이 눈매교정만 원하는 경우</li>
+                                    <li>처진 피부의 탄력을 증진시키고 싶은 경우</li>
+                                    <li>셀룰라이트 분해를 원하는 경우</li>
+                                    <li>잔주름이 많거나 안색이 어둡고 칙칙한 경우</li>
+                                    <li>HPL 지방분해 주사를 맞은 후</li>
                                 </ul>
                             </div>
                         </div>
@@ -713,7 +716,44 @@
 
                 </section>
                 
-            </div>
+            <section class="faq-wrap" aria-label="고주파 Q&A">
+  <h2 data-aos="fade-up" class="faq-title">고주파 Q&amp;A</h2>
+
+  <div class="faq" id="faq01" data-aos="fade-up">
+    <!-- item 1 -->
+    <article class="faq-item">
+      <button class="faq-q" id="q1" aria-expanded="false" aria-controls="a1" type="button">
+        <span class="faq-q__text">고주파는 몇 회를 받아야 하나요?</span>
+        <span class="faq-q__pm" aria-hidden="true"></span>
+      </button>
+      <div class="faq-a" role="region" id="a1" aria-labelledby="q1">
+        보통 3일 간격으로 1주 1-2회 시술합니다.
+      </div>
+    </article>
+
+    <!-- item 2 -->
+    <article class="faq-item">
+      <button class="faq-q" id="q2" aria-expanded="false" aria-controls="a2" type="button">
+        <span class="faq-q__text">효과는 언제쯤 확인할 수 있나요?</span>
+        <span class="faq-q__pm" aria-hidden="true"></span>
+      </button>
+      <div class="faq-a" role="region" id="a2" aria-labelledby="q2">
+        리프팅감·타이트닝은 비교적 빠르게 느끼기도 하나, 사이즈 변화는 수주에 걸쳐 점진적으로 나타납니다.
+      </div>
+    </article>
+
+    <!-- item 3 -->
+    <article class="faq-item">
+      <button class="faq-q" id="q3" aria-expanded="false" aria-controls="a3" type="button">
+        <span class="faq-q__text">고주파 시술 후 주의할 점은 무엇인가요?</span>
+        <span class="faq-q__pm" aria-hidden="true"></span>
+      </button>
+      <div class="faq-a" role="region" id="a3" aria-labelledby="q3">
+        시술 부위는 하루 정도 뜨거운 찜질·사우나·강한 운동을 피하고 충분한 수분 섭취와 가벼운 스트레칭은 회복에 도움 됩니다.
+      </div>
+    </article>
+  </div>
+</section>
 
         </section>
 
@@ -920,44 +960,39 @@
 		});
 	</script>
     <script>
-  // 탭처럼 동작: 한 번에 하나만 활성화
-  (function(){
-    const root = document.getElementById('faq');
+        // 각 .faq 섹션별로 독립 동작
+document.querySelectorAll('.faq').forEach((root) => {
+  root.addEventListener('click', (e) => {
+    const btn = e.target.closest('.faq-q');
+    if (!btn || !root.contains(btn)) return;
 
-    function openItem(item){
-      const btn = item.querySelector('.faq-q');
-      const panel = item.querySelector('.faq-a');
-      item.classList.add('is-open');
-      btn.setAttribute('aria-expanded','true');
-      // CSS가 height를 처리하므로 JS에서 수치 설정 불필요
-    }
-    function closeItem(item){
-      const btn = item.querySelector('.faq-q');
+    const targetItem = btn.closest('.faq-item');
+    const isOpen = targetItem.classList.contains('is-open');
+
+    // 같은 섹션 안의 열린 것만 닫기
+    root.querySelectorAll('.faq-item.is-open').forEach(item => {
       item.classList.remove('is-open');
-      btn.setAttribute('aria-expanded','false');
+      item.querySelector('.faq-q')?.setAttribute('aria-expanded', 'false');
+    });
+
+    if (!isOpen) {
+      targetItem.classList.add('is-open');
+      btn.setAttribute('aria-expanded', 'true');
     }
+  });
 
-    root.addEventListener('click', (e)=>{
-      const btn = e.target.closest('.faq-q');
-      if(!btn) return;
-      const targetItem = btn.closest('.faq-item');
-      const isOpen = targetItem.classList.contains('is-open');
+  // ESC로 해당 섹션만 닫기
+  root.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') {
+      root.querySelectorAll('.faq-item.is-open').forEach(item => {
+        item.classList.remove('is-open');
+        item.querySelector('.faq-q')?.setAttribute('aria-expanded', 'false');
+      });
+    }
+  });
+});
 
-      // 모두 닫기
-      root.querySelectorAll('.faq-item.is-open').forEach(closeItem);
-
-      // 새로 열기
-      if(!isOpen) openItem(targetItem);
-    });
-
-    // ESC로 열린 항목 닫기(접근성 옵션)
-    document.addEventListener('keydown', (e)=>{
-      if(e.key === 'Escape'){
-        root.querySelectorAll('.faq-item.is-open').forEach(closeItem);
-      }
-    });
-  })();
-</script>
+    </script>
 </body>
 
 </html>

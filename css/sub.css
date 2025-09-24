@@ -119,6 +119,7 @@ body{overflow-x:hidden;}
 }
 .section01__inner{width:100%; margin:0 auto; display:grid; grid-template-columns:1fr; gap:clamp(20px, 4vw, 56px); align-items:center;}
 .section01__media{margin: 0; margin-top:40px;}
+.section01__media.section01__media_01{margin: 0;}
 .section01__media img{width:100%; height:clamp(220px,45vw,460px); object-fit:cover; border-radius:16px; display:block; background:#f3f5f7;}
 .section01__text{margin-left:0;}
 .eyebrow{font-size:20px; color:#ff5aa5; letter-spacing:.02em; margin:2px 0 10px; font-weight: 700;}
@@ -244,7 +245,7 @@ body{overflow-x:hidden;}
   content:""; background:url('../img/check.png') center no-repeat;
   width:26px; height:26px; display:grid; place-items:center;
 }
-
+.tabSection .panels .panel .candidatesBG.candidatesBG_skin03 .candi-list li::before{background: url('../img/check_white.png') center no-repeat;}
 /* =========================================================
    9) Media Queries (하단 집약)
 ========================================================= */
@@ -416,8 +417,9 @@ body{overflow-x:hidden;}
 
   /* 반응형: 작은 화면에서 텍스트가 겹치지 않도록 장치 */
    @media (max-width:1024px){
-    .faq-wrap{padding: 0;}
+    .faq-wrap{padding: 60px 0 0;}
     .faq-item.is-open .faq-a{height: 100px;}
+    .faq-title{margin: 0 0 20px;}
    }
   @media (max-width:640px){
     .faq-q__text{white-space:normal; display:-webkit-box; -webkit-line-clamp:2; -webkit-box-orient:vertical;}
