@@ -1,7 +1,7 @@
 
 
   :root{
-    --max-w:1240px;
+    --max-w:1400px;
     --brand:#ff3b8f;
     --ink:#111; --muted:#666; --line:#ededed;
     --shadow:0 20px 40px rgba(0,0,0,.08);

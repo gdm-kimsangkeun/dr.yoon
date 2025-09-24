@@ -63,7 +63,7 @@ body{overflow-x:hidden;}
 /* =========================================================
    4) Panels (탭 컨텐츠 공통)
 ========================================================= */
-.panels{width:1240px; margin:0 auto; text-align:center; overflow:visible;}
+.panels{width:1400px; margin:0 auto; text-align:center; overflow:visible;}
 .panel{animation:fade .24s ease;}
 .panel[hidden]{display:none;}
 .panel__title{font-size:clamp(26px,3.6vw,48px); padding-top:150px; letter-spacing:-.02em; font-weight:600;}
@@ -92,6 +92,10 @@ body{overflow-x:hidden;}
   display:grid; grid-template-columns:repeat(5,1fr);
   gap:0; border-radius:14px;
 }
+.infoGrid.infoGrid_skin{
+  display:grid; grid-template-columns:repeat(3,1fr);
+}
+.infoGrid>li:last-child:after{display: none;}
 .infoGrid>li{
   position:relative; padding:clamp(14px,2.6vw,22px) clamp(10px,2vw,14px);
   display:grid; place-items:center; row-gap:25px; text-align:center;
@@ -208,8 +212,13 @@ body{overflow-x:hidden;}
 .tabSection .panels .panel .candidatesBG_body02{background: url('../img/body_content0202.png');}
 .tabSection .panels .panel .candidatesBG_body03{background: url('../img/body_content0303.png');}
 .tabSection .panels .panel .candidatesBG_body_middle01{background: url('../img/body_middle.png'); height: 955px;}
+.tabSection .panels .panel .candidatesBG_skin_middle01{background: url('../img/skin_middle.png'); height: 1020px;}
 
-
+.tabSection .panels .panel .candidatesBG_skin01{background: url('../img/skin_content0101.png');}
+.tabSection .panels .panel .candidatesBG_skin02{background: url('../img/skin_content0202.png');}
+.tabSection .panels .panel .candidatesBG_skin03{background: url('../img/skin_content0303.png');}
+.tabSection .panels .panel .candidatesBG_skin04{background: url('../img/skin_content0404.png');}
+.tabSection .panels .panel .candidatesBG_skin05{background: url('../img/skin_content0505.png');}
 
 .tabSection .panels .panel .candidatesBG .candi-inner{
   width:min(92vw, 1400px); margin:0 auto;
@@ -243,6 +252,12 @@ body{overflow-x:hidden;}
   background: linear-gradient(180deg, #ff8fb5, var(--pill-on));;
   border-radius: 999px;
 }
+.body_content_box{display: flex; gap: 60px; text-align: left; align-items: center; padding: 150px 0;} 
+.body_content_box .txt_box{width: 50%;}
+.body_content_box .txt_box h3{padding-bottom: 40px; font-weight: 600; font-size: 48px; color: #131313;}
+.body_content_box .txt_box p{padding-bottom: 40px; line-height: 1.8; font-weight: 400; font-size: 18px; color: #555;}
+.body_content_box .txt_box .flex_box{display: flex; gap: 20px;}
+.body_content_box .txt_box .flex_box span{color: #FF78A2; font-size: 18px; font-weight: 500;}
 /* >= 1025px 데스크톱 */
 @media (min-width:1025px){
   .tabs{justify-content:center; grid-auto-flow:row; grid-template-columns:repeat(7,max-content); overflow:visible;}
@@ -297,6 +312,13 @@ body{overflow-x:hidden;}
   .tabSection .panels .panel .candidatesBG_body02{background: url('../img/body_content0202_m.jpg') center no-repeat;}
   .tabSection .panels .panel .candidatesBG_body03{background: url('../img/body_content0303_m.jpg') center no-repeat;}  
   .tabSection .panels .panel .candidatesBG_body_middle01{background: none; height: auto; padding: 0;}
+  .tabSection .panels .panel .candidatesBG_skin_middle01{background: none; height: auto; padding: 0;}
+
+  .tabSection .panels .panel .candidatesBG_skin01{background: url('../img/skin_content0101_m.jpg') center no-repeat;}
+  .tabSection .panels .panel .candidatesBG_skin02{background: url('../img/skin_content0202_m.jpg') center no-repeat;}
+  .tabSection .panels .panel .candidatesBG_skin03{background: url('../img/skin_content0303_m.jpg') center no-repeat;}
+  .tabSection .panels .panel .candidatesBG_skin04{background: url('../img/skin_content0404_m.jpg') center no-repeat;}
+  .tabSection .panels .panel .candidatesBG_skin05{background: url('../img/skin_content0505_m.jpg') center no-repeat;}
 
   .tabSection .panels .panel .candidatesBG .candi-inner{grid-template-columns:1fr;}
   .tabSection .panels .panel .candidatesBG .candi-content{grid-column:1 / -1; max-width:720px; margin:0 auto;}
@@ -316,6 +338,16 @@ body{overflow-x:hidden;}
   .tabSection .panels .panel .surgerySteps .stepCard__bar{font-size: 2.5vw;}
   .tabSection .panels .panel .candidatesBG .candi-title{font-size: 22px;}
   .tabSection .panels .panel .candidatesBG .candi-list li{font-size: 16px;}
+
+
+  .body_content_box{display: flex; gap: 50px; text-align: left; align-items: center; padding: 60px 0; flex-direction: column} 
+  .body_content_box div{width: 100%;}
+  .body_content_box img{width: 100%;}
+  .body_content_box .txt_box{width: 100%;}
+  .body_content_box .txt_box h3{padding-bottom: 20px; font-weight: 600; font-size: 24px; color: #131313;}
+  .body_content_box .txt_box p{padding-bottom: 20px; line-height: 1.5; font-weight: 400; font-size: 16px; color: #555;}
+  .body_content_box .txt_box .flex_box{display: flex; gap: 20px;}
+  .body_content_box .txt_box .flex_box span{color: #FF78A2; font-size: 16px;}
 }
 
 /* <= 768px (모바일) */
@@ -329,6 +361,65 @@ body{overflow-x:hidden;}
 /* <= 640px (더 작은 모바일) */
 @media (max-width:640px){
   .infoGrid{grid-template-columns:repeat(2,1fr);}
+  .infoGrid.infoGrid_skin{grid-template-columns:repeat(2,1fr);}
   .infoGrid>li:nth-child(2n)::after{display:none;}
   .infoGrid>li:nth-child(n+3){border-top:1px solid var(--sep);}
 }
+
+
+
+
+
+/* faq */
+
+.faq-wrap{max-width:1400px;margin:0 auto; padding-top: 150px;}
+  .faq-title{margin:0 0 60px;font-weight:600;font-size:clamp(22px,2.5vw,48px);letter-spacing:-.02em;color:#131313;}
+  .faq{display:block}
+  .faq-item{border-bottom:1px solid #e9e9e9;}
+
+  /* 질문(닫힘=제목만 보이는 흰 박스) */
+  .faq-q{
+    width:100%; display:flex; align-items:center; justify-content:space-between; gap:16px;
+    background:#fff; border:0; text-align:left; cursor:pointer;
+    color:#131313; line-height:1.45; font-size:clamp(15px,1.6vw,18px);
+    padding:0 16px; height:72px; border-radius:6px;
+    transition: box-shadow .2s ease, border-radius .2s ease, background .2s ease;
+  }
+  .faq-q:focus-visible{outline:2px solid #131313; outline-offset:2px;}
+  .faq-q__text{flex:1 1 auto; min-width:0; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; font-size: 20px; color: #131313;}
+
+  /* + / − 아이콘 */
+  .faq-q__pm{position:relative; width:18px; height:18px; flex:0 0 18px}
+  .faq-q__pm::before, .faq-q__pm::after{
+    content:""; position:absolute; left:0; top:50%; background:#131313;
+    transform:translateY(-50%); transition:transform .2s ease, opacity .2s ease;
+  }
+  .faq-q__pm::before{ width:100%; height:2px; }                                   /* 가로선 */
+  .faq-q__pm::after{ width:2px; height:100%; left:50%; transform:translate(-50%,-50%);} /* 세로선 → + */
+
+  /* 열림 상태: 질문 윤곽선 + 아래 모서리 0 (답변과 이음) */
+  .faq-item.is-open .faq-q{
+    box-shadow: inset 0 0 0 2px #131313;
+    border-radius:6px 6px 6px 6px ;
+  }
+  .faq-item.is-open .faq-q__pm::after{ opacity:0; transform:translate(-50%,-50%) scaleY(0);} /* − */
+
+  /* 답변(처음엔 숨김 → 열리면 72px) : 질문과 '틈 없이' 맞닿음 */
+  .faq-a{
+    margin:0; background:#f7f7f7; color:#666;
+    border-radius:6px 6px 6px 6px; padding:0 16px;
+    height:0; overflow:hidden; display:flex; align-items:center;
+    font-size:18px;
+    transition:height .28s ease; color: #555;
+  }
+  .faq-item.is-open .faq-a{ height:72px; text-align: left;}
+
+  /* 반응형: 작은 화면에서 텍스트가 겹치지 않도록 장치 */
+   @media (max-width:1024px){
+    .faq-wrap{padding: 0;}
+    .faq-item.is-open .faq-a{height: 100px;}
+   }
+  @media (max-width:640px){
+    .faq-q__text{white-space:normal; display:-webkit-box; -webkit-line-clamp:2; -webkit-box-orient:vertical;}
+    .faq-a, .faq-q__text{font-size: 16px;}
+  }
