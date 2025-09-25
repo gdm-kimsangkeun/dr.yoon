@@ -219,42 +219,201 @@
 
 
   <figure class="rv-hero">
-    <img class="pc_only" src="/img/hero_content01.jpg" alt="Real Review 히어로">
-    <img class="mo_only" src="/img/hero_content01_m.jpg" alt="Real Review 히어로 모바일">
+    <img class="pc_only" src="/img/hero_content02.jpg" alt="공지사항">
+    <img class="mo_only" src="/img/hero_content02_m.jpg" alt="공지사항 모바일">
   </figure>
 
   
+<style>
+  /* ===== Container ===== */
+  .notice{width:1400px;max-width:100%; margin: 0 auto; padding:60px 0 60px}
+  .notice-title{margin:0 0 14px;font:700 22px/1.3;}
+  .notice-wrap{background:#fff;border-top:3px solid #ff7aa7;border-bottom:1px solid #eee}
+
+  /* ===== List ===== */
+  .nt-head,.nt-row{
+    display:grid;grid-template-columns:80px 14px 1fr 140px;
+    align-items:center;gap:0;border-bottom:1px solid #eee;min-height:54px
+  }
+  .nt-head{font-weight:700;color:#777;background:#fafafa}
+  .nt-sep{width:1px;height:18px;background:#e8e8e8;justify-self:center}
+  .nt-num{color:#999;text-align:center}
+  .nt-title{padding:0 16px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .nt-date{color:#666;text-align:right;padding-right:12px}
+  .nt-row{cursor:pointer}
+  .nt-row:hover .nt-title{text-decoration:underline}
+
+  /* clickable overlay for full-row anchor */
+  .nt-row > a{
+    position:absolute;inset:0;display:block;text-indent:-9999px;overflow:hidden
+  }
+  .nt-row-wrap{position:relative}
+
+  /* ===== Empty ===== */
+  .nt-empty{padding:46px 16px;color:#999;text-align:center}
+
+  /* ===== Pagination ===== */
+  .nt-paging{
+    display:flex;gap:10px;align-items:center;justify-content:center;margin:24px 0 0;color:#9aa0a6
+  }
+  .nt-pagebtn{
+    appearance:none;border:none;background:transparent;color:#9aa0a6;
+    width:28px;height:28px;border-radius:999px;cursor:pointer
+  }
+  .nt-pagebtn:hover{background:#f6f6f8;color:#666}
+  .nt-pagebtn[disabled]{opacity:.35;cursor:default}
+  .nt-numbtn{font-weight:600}
+  .nt-numbtn.is-current{background:#ff7aa7;color:#fff;box-shadow:0 2px 6px rgba(255,122,167,.35)}
+
+  /* ===== Responsive ===== */
+  @media (max-width:860px){
+    .nt-head,.nt-row{grid-template-columns:64px 12px 1fr 108px}
+  }
+  @media (max-width:640px){
+    .notice{padding:40px 15px;}
+    .nt-head,.nt-row{grid-template-columns:54px 10px 1fr 92px;min-height:50px}
+    .notice-title{font-size:20px}
+  }
+</style>
 
 
+<main class="notice" aria-labelledby="noticeTitle">
+  
 
-<main class="detail" aria-labelledby="detailTitle">
-  <div class="bar-top"></div>
-  <h1 class="detail-title" id="detailTitle">인형같이 생겼다고 들었어요</h1>
+  <section class="notice-wrap" aria-live="polite">
+    <!-- Head -->
+    <div class="nt-head">
+      <div class="nt-num">No</div>
+      <div class="nt-sep" aria-hidden="true"></div>
+      <div class="nt-title">제목</div>
+      <div class="nt-date">날짜</div>
+    </div>
 
-<div class="detail-meta meta-bar" role="group" aria-label="메타 정보">
-  <span class="meta-cat">비절개 눈매교정</span>
-  <span class="meta-sep" aria-hidden="true"></span>
-  <span class="meta-date"><b>Date</b>&nbsp; 2025-03-11</span>
-</div>
-
-  <!-- 이미지가 들어갈 자리 (비워둠) -->
-  <section class="detail-media" aria-label="리뷰 이미지 영역">
-    <p>
-      <img src="/img/detail01.png" alt="">
-    </p>
+    <!-- List -->
+    <div id="ntList"></div>
   </section>
 
-  <!-- 본문이 필요 없으면 이 섹션은 삭제해도 됩니다 -->
-  <article class="detail-content">
-    <!-- 텍스트가 필요하면 여기에 작성 -->
-  </article>
-
-  <div class="detail-actions">
-    <a href="/review.html" class="btn" role="button" aria-label="목록으로">목록</a>
-  </div>
+  <!-- Pagination -->
+  <nav class="nt-paging" id="ntPaging" aria-label="페이지 이동"></nav>
 </main>
 
+<script>
+(function(){
+  /* ===== Mock Data (원하는 데이터로 교체) =====
+     - id(번호), title(제목), date(YYYY-MM-DD), url(상세 경로)
+  */
+  const DATA = [
+    {id:11,title:'자극받은 여름피부, 레이저 & 리프팅 집중케어',date:'2025-07-29',url:'/detail_notice.html'},
+    {id:10,title:'8월 휴진 및 진료시간 안내',date:'2025-07-28',url:'/notice/58'},
+    {id:9,title:'여름 이벤트 2차 오픈 안내',date:'2025-07-26',url:'/notice/57'},
+    {id:8,title:'고객센터 전화 일시 장애 복구',date:'2025-07-25',url:'/notice/56'},
+    {id:7,title:'리뷰 인증 혜택 변경 안내',date:'2025-07-20',url:'/notice/55'},
+    {id:6,title:'원내 마스크 착용 권고 안내',date:'2025-07-15',url:'/notice/54'},
+    {id:5,title:'주차요금 지원 기준 변경',date:'2025-07-12',url:'/notice/53'},
+    {id:4,title:'7월 감사 이벤트 당첨자 발표',date:'2025-07-10',url:'/notice/52'},
+    // 8개 초과 → 2페이지로 넘어가게 추가
+    {id:3,title:'정전 점검으로 인한 진료 지연 안내',date:'2025-07-08',url:'/notice/51'},
+    {id:2,title:'비급여 수가표 개정 안내',date:'2025-07-05',url:'/notice/50'},
+    {id:1,title:'카카오 채널 상담 점검 공지',date:'2025-07-01',url:'/notice/49'}
+  ];
 
+  /* ===== Settings ===== */
+  const PER_PAGE = 8;
+
+  /* ===== State ===== */
+  let state = { page: 1 };
+
+  /* ===== DOM ===== */
+  const listEl = document.getElementById('ntList');
+  const pagingEl = document.getElementById('ntPaging');
+
+  /* ===== Render List ===== */
+  function renderList(){
+    const start = (state.page - 1) * PER_PAGE;
+    const pageItems = DATA.slice(start, start + PER_PAGE);
+
+    listEl.innerHTML = '';
+
+    if(pageItems.length === 0){
+      listEl.innerHTML = `<div class="nt-empty">등록된 공지가 없습니다.</div>`;
+      return;
+    }
+
+    pageItems.forEach(item=>{
+      const row = document.createElement('div');
+      row.className = 'nt-row nt-row-wrap';
+      row.innerHTML = `
+        <div class="nt-num">${item.id}</div>
+        <div class="nt-sep" aria-hidden="true"></div>
+        <div class="nt-title">${escapeHtml(item.title)}</div>
+        <div class="nt-date">${item.date}</div>
+        <a href="${item.url}" aria-label="${escapeHtml(item.title)} 상세보기"></a>
+      `;
+      listEl.appendChild(row);
+    });
+  }
+
+  /* ===== Render Pagination ===== */
+  function renderPager(){
+    const totalPages = Math.max(1, Math.ceil(DATA.length / PER_PAGE));
+    pagingEl.innerHTML = '';
+
+    if (totalPages <= 1){ return; }
+
+    // Prev
+    pagingEl.appendChild(makeBtn('‹', {
+      class:'nt-pagebtn', disabled: state.page===1,
+      onClick:()=>go(state.page-1, totalPages),
+      title:'이전'
+    }));
+
+    // Numbers
+    for(let p=1;p<=totalPages;p++){
+      pagingEl.appendChild(makeBtn(String(p), {
+        class:'nt-pagebtn nt-numbtn'+(p===state.page?' is-current':''),
+        onClick:()=>go(p, totalPages),
+        title:`${p}페이지`
+      }));
+    }
+
+    // Next
+    pagingEl.appendChild(makeBtn('›', {
+      class:'nt-pagebtn', disabled: state.page===totalPages,
+      onClick:()=>go(state.page+1, totalPages),
+      title:'다음'
+    }));
+  }
+
+  /* ===== Helpers ===== */
+  function makeBtn(label, opts){
+    const b = document.createElement('button');
+    b.type = 'button';
+    b.textContent = label;
+    if (opts.class) b.className = opts.class;
+    if (opts.title) b.title = opts.title;
+    if (opts.disabled) b.disabled = true;
+    if (opts.onClick) b.addEventListener('click', opts.onClick);
+    return b;
+  }
+
+  function go(p, totalPages){
+    if (p<1 || p>(totalPages||1)) return;
+    state.page = p;
+    renderList();
+    renderPager();
+    // 접근성: 페이지 이동 후 헤더로 포커스 이동을 원하면 아래 주석 해제
+    // document.querySelector('.notice-title')?.focus();
+  }
+
+  function escapeHtml(s){
+    return String(s).replace(/[&<>"']/g, m => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[m]));
+  }
+
+  /* ===== Init ===== */
+  renderList();
+  renderPager();
+})();
+</script>
 
 
 

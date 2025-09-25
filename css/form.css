@@ -132,7 +132,7 @@
     .login_box .brand{padding:36px 24px;}
     .login_box .brand .mark{font-size:30px}
     .login_box .content{padding:32px 24px}
-    .login_box{padding: 150px 15px;}
+    .login_box{padding: 60px 15px;}
   }
 
 
@@ -291,3 +291,179 @@
                 padding: 60px 15px;
             }
         }
+
+
+
+
+
+        /* review */
+        /* ===================== Review: 공용 ===================== */
+        .rv-hero img{width: 100%;}
+.review{width:100%;padding:150px 0}
+.review .sr-only{position:absolute;width:1px;height:1px;clip:rect(0 0 0 0);clip-path:inset(50%);overflow:hidden;white-space:nowrap}
+.rv-hero{padding:0;margin:0}
+
+/* 고정폭 컨테이너(1400) */
+.review .rv-tabs,
+.review .rv-grid,
+.review .rv-paging{width:1400px;max-width:100%;margin-left:auto;margin-right:auto}
+
+/* ===================== Tabs ===================== */
+.review .rv-tabs{
+  display:flex;gap:40px;justify-content:center;align-items:center
+}
+.review .rv-tab{
+  appearance:none;color:#111;
+  display:flex;flex-direction:column;align-items:center;justify-content:center;gap:20px;
+  height:auto;min-width:84px;padding:10px 16px;border-radius:999px;
+  font:700 14px/1;
+  cursor:pointer;transition:color .15s ease; /* 배경/보더 전환 제거 */
+  flex:0 0 auto
+}
+/* hover/active에서도 배경·보더 변화 없음 */
+.review .rv-tab:hover,
+.review .rv-tab.is-active{background:#fff;border-color:#eee;color:inherit}
+
+/* 아이콘 52×52 */
+.rv-tab .rv-ico{
+  position:relative;width:52px;height:52px;margin:0 auto 6px;
+  display:flex;align-items:center;justify-content:center
+}
+.rv-tab .rv-ico .ico{
+  position:absolute;inset:0;width:52px;height:52px;object-fit:contain;transition:opacity .15s ease
+}
+/* 아이콘 스왑 */
+.rv-tab .ico--black{opacity:1}
+.rv-tab .ico--pink{opacity:0}
+.rv-tab:hover .ico--black,.rv-tab.is-active .ico--black{opacity:0}
+.rv-tab:hover .ico--pink,.rv-tab.is-active .ico--pink{opacity:1}
+
+/* 라벨 색상 전환만 */
+.rv-tab p{margin:0;color:#555;font-size:16px;line-height:1;transition:color .15s ease}
+.rv-tab:hover p,.rv-tab.is-active p{color:#FF78A2 !important}
+
+/* ===================== Grid / Cards ===================== */
+.review .rv-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;padding:40px 0 16px}
+.review .rv-card{
+  background:#fff;border:1px solid #eee;border-radius:12px;overflow:hidden;
+  transition:transform .12s ease,box-shadow .12s ease
+}
+.review .rv-card:hover{transform:translateY(-2px);box-shadow:0 12px 24px rgba(0,0,0,.06)}
+.review .rv-card img{display:block;width:100%;height:200px;object-fit:cover}
+.review .rv-title{margin:12px 14px 6px;font-size:20px;font-weight:600;color:#333;line-height:1.4}
+.review .rv-desc{margin:0 14px 14px;font-size:16px;color:#666;line-height:1.6}
+
+/* ===================== Pagination ===================== */
+.review .rv-paging{display:flex;gap:10px;align-items:center;justify-content:center;padding:20px 0;color:#9aa0a6;font-size:14px}
+.review .rv-paging button{
+  appearance:none;border:none;background:transparent;color:#9aa0a6;cursor:pointer;
+  padding:0 8px;height:28px;min-width:28px;border-radius:999px;transition:background .15s,color .15s
+}
+.review .rv-paging button:hover{background:#f5f5f7;color:#666}
+.review .rv-paging .num{font-weight:600}
+.review .rv-paging .is-current{background:#ff6ea3;color:#fff !important;box-shadow:0 2px 6px rgba(255,110,163,.35)}
+.review .rv-paging .arrow{font-size:16px;line-height:1}
+.review .rv-paging .arrow[disabled]{opacity:.35;cursor:default}
+.review .rv-paging .ellipsis{pointer-events:none;padding:0 2px}
+
+/* ===================== Responsive ===================== */
+@media (max-width:1100px){
+  .review{padding:60px 15px}
+  .review .rv-grid{grid-template-columns:repeat(2,1fr)}
+  .review .rv-title{font-size:18px}
+}
+@media (max-width:640px){
+  .review .rv-tabs{
+    justify-content:flex-start;gap:10px;overflow-x:auto;-webkit-overflow-scrolling:touch;scrollbar-width:thin
+  }
+  .review .rv-tabs::-webkit-scrollbar{height:6px}
+  .review .rv-tabs::-webkit-scrollbar-thumb{background:#e5e5e7;border-radius:999px}
+
+  .review .rv-grid{grid-template-columns:1fr}
+  .review .rv-tab{padding:8px 12px;font-size:13px;min-width:72px}
+  .rv-tab .rv-ico{width:52px;height:52px;margin-bottom:4px}
+  .rv-tab .rv-ico .ico{width:52px;height:52px}
+}
+
+
+
+/* ===== Hero (선택) ===== */
+.rv-hero{margin:0;padding:0}
+
+/* ===== 상단 구분선 ===== */
+.bar-top{height:1px;background:#eceff1}
+
+/* ===== 컨테이너 ===== */
+.detail{
+  max-width:1400px;
+  margin:0 auto;
+  padding:60px 0;           /* 데스크톱: 좌우 0 */
+  color:#111;
+}
+
+/* ===== 제목 ===== */
+.detail-title{
+  margin:20px 15px;         /* 좌우 여유 */
+  font-size:22px;
+  font-weight:700;
+  line-height:1.45;
+  letter-spacing:-.2px;
+}
+
+/* ===== 메타(키/값 유틸) ===== */
+.meta-item{display:flex;align-items:center;gap:6px;white-space:nowrap}
+.meta-key{font-weight:700;color:#000;font-size:13px;opacity:.85}
+.meta-val{color:#555}
+
+/* ===== 메타바 (스크린샷 동일 레이아웃) ===== */
+.meta-bar{
+  display:flex;align-items:center;gap:14px;
+  background:#f5f5f5;
+  padding:10px 14px;
+  border:none;border-radius:4px;
+  font-size:16px;line-height:1.4;color:#131313;
+}
+.meta-bar .meta-cat{font-weight:700;color:#131313;white-space:nowrap}
+.meta-bar .meta-sep{flex:0 0 1px;width:1px;height:16px;background:#e6e6e6}
+.meta-bar .meta-date{color:#aaa;font-weight:400;white-space:nowrap}
+.meta-bar .meta-date b{color:#aaa;font-weight:400;}
+
+/* ===== 이미지 자리 (비워둠) ===== */
+.detail-media{
+  margin:28px 20px 24px;
+  overflow:hidden;border-radius:0;
+  text-align:center;        /* 이미지 중앙 정렬 시 사용 */
+}
+
+/* ===== 본문(옵션) ===== */
+.detail-content{
+  margin:0 20px;
+  color:#333;font-size:16px;line-height:1.9;
+}
+
+/* ===== 버튼 영역 ===== */
+.detail-actions{
+  margin:36px 20px 0;
+  display:flex;justify-content:center;
+}
+.detail .btn{
+  display:inline-flex;align-items:center;justify-content:center;
+  height:42px;padding:10px 33px;border-radius:10px;
+  background:#111;color:#fff;font-weight:700;font-size:16px;
+  border:none;cursor:pointer;transition:opacity .15s ease;
+}
+.detail .btn:hover{opacity:.88}
+.detail .btn:focus-visible{outline:2px solid #ff78a2;outline-offset:3px}
+
+/* ===== Mobile (≤640px) ===== */
+@media (max-width:640px){
+  .detail{padding:60px 15px} /* 요청: 0 15 */
+  .detail-title,
+  .detail-meta,
+  .detail-media,
+  .detail-content,
+  .detail-actions{margin-left:0;margin-right:0}
+
+  .meta-bar{padding:10px 12px;gap:12px;font-size:13px}
+  .meta-bar .meta-sep{height:14px}
+}

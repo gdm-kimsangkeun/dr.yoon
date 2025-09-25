@@ -52,7 +52,7 @@
 
 <link rel="stylesheet" href="/css/reset.css">
 <link rel="stylesheet" href="/css/main.css">
-
+<link rel="stylesheet" href="/css/form.css">
 <link href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css" rel="stylesheet" />
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"/>
 
@@ -300,114 +300,7 @@
   <nav class="rv-paging" id="rvPaging" aria-label="리뷰 페이지 이동"></nav>
 </div>
 
-<style>
-/* ===== Review: 공용 ===== */
-.review { width:100%; padding:150px 0; }
-.review .sr-only{position:absolute;width:1px;height:1px;clip:rect(0 0 0 0);clip-path:inset(50%);overflow:hidden;white-space:nowrap}
-.rv-hero{padding: 0; margin: 0;}
-/* 고정폭 컨테이너(1400) */
-.review .rv-tabs,
-.review .rv-grid,
-.review .rv-paging{
-  width:1400px; max-width:100%;
-  margin-left:auto; margin-right:auto;
-}
 
-/* 탭 기본 */
-.review .rv-tabs{
-  display:flex; gap:40px; justify-content:center; align-items:center;
-}
-.review .rv-tab{
-  appearance:none; color:#111;
-  height:auto; padding:10px 16px;
-  border-radius:999px;font-weight:700;font-size:14px;
-  gap: 20px;
-  cursor:pointer;transition:color .15s; /* 배경/보더 전환 제거 */
-  display:flex; flex-direction:column; align-items:center; justify-content:center;
-  min-width:84px; flex:0 0 auto; /* 모바일 가로 스크롤 대비 */
-}
-
-/* hover/active에서도 배경·보더 변화 없음 */
-.review .rv-tab:hover{ background:#fff; border-color:#eee; }
-.review .rv-tab.is-active{ background:#fff; border-color:#eee; color:inherit; }
-
-/* 아이콘 52x52 지정 */
-.rv-tab .rv-ico{
-  position:relative;
-  width:52px; height:52px;
-  display:flex; align-items:center; justify-content:center;
-  margin:0 auto 6px;
-}
-.rv-tab .rv-ico .ico{
-  position:absolute; inset:0;
-  width:52px; height:52px; /* 원본 이미지 52x52 */
-  object-fit:contain;
-  transition: opacity .15s ease;
-}
-
-/* 아이콘 스왑 */
-.rv-tab .ico--black{ opacity:1; }
-.rv-tab .ico--pink { opacity:0; }
-.rv-tab:hover .ico--black,
-.rv-tab.is-active .ico--black{ opacity:0; }
-.rv-tab:hover .ico--pink,
-.rv-tab.is-active .ico--pink{ opacity:1; }
-
-/* 텍스트 컬러만 전환 */
-.rv-tab p{
-  color:#555; line-height:1; transition: color .15s ease; font-size: 16px;
-}
-.rv-tab:hover p,
-.rv-tab.is-active p{ color:#FF78A2 !important; }
-
-/* 그리드 */
-.review .rv-grid{
-  display:grid; grid-template-columns:repeat(3,1fr);
-  gap:24px; padding-bottom:16px; padding-top: 40px;
-}
-.review .rv-card{
-  background:#fff;border:1px solid #eee;border-radius:12px;overflow:hidden;
-  transition:transform .12s ease, box-shadow .12s ease;
-}
-.review .rv-card:hover{ transform:translateY(-2px); box-shadow:0 12px 24px rgba(0,0,0,.06); }
-.review .rv-card img{ display:block;width:100%;height:200px;object-fit:cover; }
-.review .rv-title{ margin:12px 14px 6px; font-size:20px; font-weight:600; color:#333; line-height:1.4; }
-.review .rv-desc{ margin:0 14px 14px; font-size:16px; color:#666; line-height:1.6; }
-
-/* 반응형: 모바일 탭 가로 스크롤 */
-@media (max-width:1100px){
-  .review{padding:60px 15px;}
-  .review .rv-grid{ grid-template-columns:repeat(2,1fr); }
-  .review .rv-title{font-size: 18px;}
-}
-@media (max-width:640px){
-  .review .rv-tabs{
-    justify-content:flex-start; gap:10px;
-    overflow-x:auto; -webkit-overflow-scrolling:touch;
-    scrollbar-width:thin;
-  }
-  .review .rv-tabs::-webkit-scrollbar{ height:6px; }
-  .review .rv-tabs::-webkit-scrollbar-thumb{ background:#e5e5e7; border-radius:999px; }
-
-  .review .rv-grid{ grid-template-columns:1fr; }
-  .review .rv-tab{ padding:8px 12px; font-size:13px; min-width:72px; }
-  .rv-tab .rv-ico{ width:52px; height:52px; margin-bottom:4px; }
-  .rv-tab .rv-ico .ico{ width:52px; height:52px; }
-}
-
-/* ===== Pagination ===== */
-.review .rv-paging{display:flex;gap:10px;align-items:center;justify-content:center;padding:20px 0;color:#9aa0a6;font-size:14px}
-.review .rv-paging button{
-  appearance:none;border:none;background:transparent;color:#9aa0a6;cursor:pointer;
-  padding:0 8px;height:28px;min-width:28px;border-radius:999px;transition:background .15s,color .15s
-}
-.review .rv-paging button:hover{background:#f5f5f7;color:#666}
-.review .rv-paging .num{font-weight:600}
-.review .rv-paging .is-current{background:#ff6ea3;color:#fff !important;box-shadow:0 2px 6px rgba(255,110,163,.35)}
-.review .rv-paging .arrow{font-size:16px;line-height:1}
-.review .rv-paging .arrow[disabled]{opacity:.35;cursor:default}
-.review .rv-paging .ellipsis{pointer-events:none;padding:0 2px}
-</style>
 
 <script>
 /* ====== 수동 데이터 기반 렌더러 (그리드/페이징) ====== */
