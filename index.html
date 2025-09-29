@@ -121,7 +121,21 @@
             </div>
           </div>
         </li>
-        <li><a href="face.html">안면거상술</a></li>
+        <li>
+            <a href="#">안면·눈썹거상</a>
+            <div class="mega" role="region" aria-label="병원소개 하위메뉴">
+            <div class="wrap">
+              <div class="col bg">
+                <!-- <h3>병원소개</h3> -->
+                <ul class="menu">
+                  <li><a class="item" href="face_01.html"><span>안면거상</span></a></li>
+                  <li><a class="item" href="face_02.html"><span>눈썹거상</span></a></li>
+                </ul>
+              </div>
+              <div><!-- 필요시 배너/이미지 --></div>
+            </div>
+          </div>
+        </li>
         <li>
             <a href="#">가슴</a>
             <div class="mega" role="region" aria-label="병원소개 하위메뉴">
@@ -572,15 +586,18 @@
       <span class="label hour" data-aos="fade-up">진료시간</span>
       <div class="map-hours">
         <div class="row" data-aos="fade-up">
-          <b>월요일~목요일</b><span>10:30 ~ 19:00</span>
+          <b>월요일~수요일</b><span>10:30 ~ 19:00</span>
         </div>
         <div class="row" data-aos="fade-up">
-          <b>금요일(야간)</b><span>10:30 ~ 20:30</span>
+          <b>금요일(야간)</b><span>10:30 ~ 20:00</span>
         </div>
         <div class="row" data-aos="fade-up">
-          <b>토요일</b><span>10:30 ~ 15:00</span>
+          <b>토요일</b><span>10:00 ~ 15:00</span>
         </div>
-        <p class="note" data-aos="fade-up">*일요일, 공휴일 휴진</p>
+        <div class="row" data-aos="fade-up">
+          <b>점심시간</b><span>13:00 ~ 14:30</span>
+        </div>
+        <p class="note" data-aos="fade-up">*목요일, 일요일, 공휴일 휴진</p>
       </div>
     </aside>
   </div>
@@ -624,17 +641,17 @@
 
 <!-- Quick Menu -->
 <nav class="quick" aria-label="빠른메뉴">
-  <a class="qk-item" href="tel:010-0000-0000">
+  <a class="qk-item" href="tel:032-321-9022">
     <span class="qk-ico"><img src="/img/phone.png" alt="전화문의" /></span>
     <span class="qk-txt">전화문의</span>
   </a>
 
-  <a class="qk-item" href="/guide">
+  <a class="qk-item" href="/introduce.html">
     <span class="qk-ico"><img src="/img/location.png" alt="진료안내" /></span>
     <span class="qk-txt">진료안내</span>
   </a>
 
-  <a class="qk-item" href="/reservation">
+  <a class="qk-item" href="#">
     <span class="qk-ico"><img src="/img/reserve.png" alt="진료예약" /></span>
     <span class="qk-txt">진료예약</span>
   </a>
@@ -648,206 +665,6 @@
 <button id="btnTop" class="topbtn" aria-label="맨 위로 이동"></button>
 
 
-<style>
-
-
-/* 공통 컨테이너 */
-.quick{
-  position: fixed;
-  right: 16px;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 77px;
-  background: #fff;
-  border: 1px solid #eceff1;
-  border-radius: 12px;
-  box-shadow: 0 10px 30px rgba(0,0,0,.08);
-  padding: 20px 0;
-  display: flex;
-  flex-direction: column;
-  align-items: stretch;
-  gap: 30px;
-  z-index: 9999;
-  font-size: 14px;
-}
-
-/* 항목 */
-.qk-item{
-  display: grid;
-  grid-template-rows: 28px auto;
-  align-items: center;
-  justify-items: center;
-  color: var(--qk-ink);
-  text-decoration: none;
-  padding: 2px 8px;
-  line-height: 1.15;
-  font-size: 14px;
-}
-
-/* 아이콘 영역만 자리 고정 (이미지는 갖고 계신 것 사용) */
-.qk-ico{
-  width: 28px;
-  height: 28px;
-  display: grid;
-  place-items: center;
-}
-.qk-ico img{
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-  display: block;
-  filter: none; /* 필요시 색상 조정 */
-}
-
-/* 텍스트 */
-.qk-txt{ margin-top: 15px; text-align: center; font-size: 14px;}
-
-/* 구분선 */
-.qk-item:not(:last-child){
-  position: relative;
-}
-.qk-item:not(:last-child)::after{
-  content: "";
-  position: absolute;
-  left: 12px;
-  right: 12px;
-  bottom: calc(-1 * 30px / 2);
-  height: 1px;
-  background: #eceff1;
-}
-
-/* 호버 효과(데스크톱) */
-@media (hover:hover){
-  .qk-item:hover .qk-ico img{
-    transform: translateY(-1px);
-  }
-  .qk-item:hover .qk-txt{
-    color: #ff78a2;
-  }
-}
-
-/* =========================
-   Mobile (<=768px): 하단 고정 그리드 4칸
-   ========================= */
-@media (max-width:768px){
-  .quick{
-    left: 0;
-    right: 0;
-    bottom: 0;
-    top: auto;
-    transform: none;
-    width: auto;
-    border-radius: 14px 14px 0 0;
-    padding: max(6px, env(safe-area-inset-bottom) * .2)
-             max(10px, env(safe-area-inset-left))
-             max(6px, env(safe-area-inset-bottom))
-             max(10px, env(safe-area-inset-right));
-    border-left: none;
-    border-right: none;
-    gap: 0;
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-  }
-  .qk-item{
-    grid-template-rows: 24px auto;
-    padding: 8px 6px 10px;
-    font-size: 11.5px;
-  }
-  .qk-ico{ width: 24px; height: 24px; }
-  .qk-item::after{ display: none; }            /* 세로 구분선 제거 */
-  .qk-item + .qk-item{
-    border-left: 1px solid #eceff1;     /* 그리드 내부 분리선 */
-  }
-}
-
-:root{
-  --topbtn-size: 40px;
-  --topbtn-bg: #FF78A2;     /* 버튼 배경색 (원본 비슷한 오렌지) */
-  --topbtn-ink: #fff;       /* 아이콘(꺾쇠) 색 */
-  --topbtn-shadow: 0 10px 24px rgba(0,0,0,.18);
-}
-
-/* 기본 상태: 숨김 */
-.topbtn{
-  position: fixed;
-  right: max(16px, env(safe-area-inset-right));
-  bottom: calc(16px + env(safe-area-inset-bottom));
-  width: var(--topbtn-size);
-  height: var(--topbtn-size);
-  border: 0;
-  border-radius: 999px;
-  background: var(--topbtn-bg);
-  box-shadow: var(--topbtn-shadow);
-  cursor: pointer;
-  z-index: 9999;
-  opacity: 0;
-  visibility: hidden;
-  transform: translateY(8px) scale(.96);
-  transition: opacity .18s ease, transform .18s ease, visibility 0s .18s; /* 숨김때 지연 */
-}
-
-/* 화살표(아이콘) – CSS로 그림 */
-.topbtn::before{
-  content: "";
-  position: absolute; inset: 0;
-  margin: auto;
-  width: 8px; height: 8px;
-  border-top: 3px solid var(--topbtn-ink);
-  border-right: 3px solid var(--topbtn-ink);
-  transform: rotate(-45deg);           /* ∧ 모양 */
-  top: 2px;                            /* 살짝 위로 */
-}
-
-/* 포커스/호버 */
-.topbtn:hover{ filter: brightness(1.05); }
-.topbtn:active{ transform: translateY(10px) scale(.95); }
-.topbtn:focus-visible{ outline: 2px solid #fff; outline-offset: 2px; }
-
-/* 활성 상태 */
-.topbtn.is-show{
-  opacity: 1;
-  visibility: visible;
-  transform: translateY(0) scale(1);
-  transition: opacity .18s ease, transform .18s ease; /* 보일 땐 즉시 */
-}
-
-/* 작은 화면에서 살짝 축소 */
-@media (max-width:640px){
-  :root{ --topbtn-size: 48px; }
-  .topbtn{bottom:12%;}
-}
-
-
-</style>
-
-<script>
-  (function(){
-    const btn = document.getElementById('btnTop');
-
-    // 스크롤 위치에 따라 노출
-    const toggleBtn = () => {
-      // 문서 높이가 화면보다 클 때 + 160px 이상 내려가면 표시
-      const hasScroll = document.documentElement.scrollHeight > window.innerHeight + 1;
-      const past = window.scrollY > 160;
-      btn.classList.toggle('is-show', hasScroll && past);
-    };
-
-    // 부드러운 스크롤 (사용자 설정을 존중)
-    const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-
-    btn.addEventListener('click', () => {
-      window.scrollTo({
-        top: 0,
-        behavior: prefersReduced ? 'auto' : 'smooth'
-      });
-    });
-
-    // 초기/스크롤/리사이즈 시 체크
-    ['load','scroll','resize'].forEach(evt =>
-      window.addEventListener(evt, toggleBtn, { passive: true })
-    );
-  })();
-</script>
 
 
 <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
@@ -855,7 +672,7 @@
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
 <script src="/js/main.js"></script>
-
+<script src="/js/slider.js"></script>
 
 <script>
 		AOS.init({
@@ -863,6 +680,8 @@
 			duration: 1200,
 		});
 </script>
+
+
 
 </body>
 </html>

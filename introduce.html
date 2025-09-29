@@ -122,7 +122,21 @@
             </div>
           </div>
         </li>
-        <li><a href="face.html">안면거상술</a></li>
+        <li>
+            <a href="#">안면·눈썹거상</a>
+            <div class="mega" role="region" aria-label="병원소개 하위메뉴">
+            <div class="wrap">
+              <div class="col bg">
+                <!-- <h3>병원소개</h3> -->
+                <ul class="menu">
+                  <li><a class="item" href="face_01.html"><span>안면거상</span></a></li>
+                  <li><a class="item" href="face_02.html"><span>눈썹거상</span></a></li>
+                </ul>
+              </div>
+              <div><!-- 필요시 배너/이미지 --></div>
+            </div>
+          </div>
+        </li>
         <li>
             <a href="#">가슴</a>
             <div class="mega" role="region" aria-label="병원소개 하위메뉴">
@@ -295,10 +309,11 @@
         <div class="block">
           <div class="label">진료안내</div>
           <div class="hours">
-            <div class="col"><span class="name">월요일-목요일</span><span class="time">10:30 - 19:00</span></div>
-            <div class="col"><span class="name">금요일(야간)</span><span class="time">10:30 - 20:30</span></div>
-            <div class="col"><span class="name">토요일</span><span class="time">10:30 - 15:00</span></div>
-            <div class="col"><small>* 점심시간, 공휴일 휴진</small></div>
+            <div class="col"><span class="name">월요일-수요일</span><span class="time">10:30 - 19:00</span></div>
+            <div class="col"><span class="name">금요일(야간)</span><span class="time">10:30 - 20:00</span></div>
+            <div class="col"><span class="name">토요일</span><span class="time">10:00 - 15:00</span></div>
+            <div class="col"><span class="name">점심시간</span><span class="time">13:00 - 14:30</span></div>
+            <div class="col"><small>* 목요일, 일요일, 공휴일 휴진</small></div>
           </div>
         </div>
 
@@ -315,7 +330,7 @@
     <!-- 하단 안내 칩 -->
     <div class="loc-chips" data-aos="fade-up">
       <div class="chip"><img src="/img/introduce_icon01.png" alt="자가 아이콘"><div><h4>자가 이용시</h4><p>우신빌딩 입차, 건물 지하주차장 이용 가능</p></div></div>
-      <div class="chip"><img src="/img/introduce_icon02.png" alt="전철 아이콘"><div><h4>전철 이용시</h4><p>7호선 부천시청역 3번 출구 도보 약 3분 거리</p></div></div>
+      <div class="chip"><img src="/img/introduce_icon02.png" alt="전철 아이콘"><div><h4>전철 이용시</h4><p>7호선 부천시청역 4번 출구 도보 약 3분 거리</p></div></div>
       <div class="chip"><img src="/img/introduce_icon03.png" alt="시내버스 아이콘"><div><h4>시내버스 이용시</h4><p>부천시청역 정류장 하차 후 도보 2–4분 소요</p></div></div>
     </div>
   </section>
@@ -356,7 +371,30 @@
   </div>
 </footer>
 
+<!-- Quick Menu -->
+<nav class="quick" aria-label="빠른메뉴">
+  <a class="qk-item" href="tel:032-321-9022">
+    <span class="qk-ico"><img src="/img/phone.png" alt="전화문의" /></span>
+    <span class="qk-txt">전화문의</span>
+  </a>
 
+  <a class="qk-item" href="/introduce.html">
+    <span class="qk-ico"><img src="/img/location.png" alt="진료안내" /></span>
+    <span class="qk-txt">진료안내</span>
+  </a>
+
+  <a class="qk-item" href="#">
+    <span class="qk-ico"><img src="/img/reserve.png" alt="진료예약" /></span>
+    <span class="qk-txt">진료예약</span>
+  </a>
+
+  <a class="qk-item" href="#" target="_blank" rel="noopener">
+    <span class="qk-ico"><img src="/img/form.png" alt="카톡상담" /></span>
+    <span class="qk-txt">카톡상담</span>
+  </a>
+</nav>
+
+<button id="btnTop" class="topbtn" aria-label="맨 위로 이동"></button>
 
 <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
 <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">

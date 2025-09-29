@@ -63,7 +63,7 @@
 <body>
 
     <!-- Header -->
-  <header class="header" id="siteHeader">
+ <header class="header" id="siteHeader">
   <div class="bar">
     <!-- 모바일: 햄버거 버튼 -->
     <button class="hamburger" aria-controls="gnb" aria-expanded="false" aria-label="메뉴 열기/닫기">
@@ -125,7 +125,21 @@
             </div>
           </div>
         </li>
-        <li><a href="face.html">안면거상술</a></li>
+        <li>
+            <a href="#">안면·눈썹거상</a>
+            <div class="mega" role="region" aria-label="병원소개 하위메뉴">
+            <div class="wrap">
+              <div class="col bg">
+                <!-- <h3>병원소개</h3> -->
+                <ul class="menu">
+                  <li><a class="item" href="face_01.html"><span>안면거상</span></a></li>
+                  <li><a class="item" href="face_02.html"><span>눈썹거상</span></a></li>
+                </ul>
+              </div>
+              <div><!-- 필요시 배너/이미지 --></div>
+            </div>
+          </div>
+        </li>
         <li>
             <a href="#">가슴</a>
             <div class="mega" role="region" aria-label="병원소개 하위메뉴">
@@ -1384,6 +1398,32 @@
             <p class="foot-copy">COPYRIGHT© 닥터윤성형외과. ALL RIGHTS RESERVED.</p>
         </div>
     </footer>
+
+    <!-- Quick Menu -->
+<nav class="quick" aria-label="빠른메뉴">
+  <a class="qk-item" href="tel:032-321-9022">
+    <span class="qk-ico"><img src="/img/phone.png" alt="전화문의" /></span>
+    <span class="qk-txt">전화문의</span>
+  </a>
+
+  <a class="qk-item" href="/introduce.html">
+    <span class="qk-ico"><img src="/img/location.png" alt="진료안내" /></span>
+    <span class="qk-txt">진료안내</span>
+  </a>
+
+  <a class="qk-item" href="#">
+    <span class="qk-ico"><img src="/img/reserve.png" alt="진료예약" /></span>
+    <span class="qk-txt">진료예약</span>
+  </a>
+
+  <a class="qk-item" href="#" target="_blank" rel="noopener">
+    <span class="qk-ico"><img src="/img/form.png" alt="카톡상담" /></span>
+    <span class="qk-txt">카톡상담</span>
+  </a>
+</nav>
+
+<button id="btnTop" class="topbtn" aria-label="맨 위로 이동"></button>
+
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
