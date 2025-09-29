@@ -52,6 +52,7 @@
 
 <link rel="stylesheet" href="/css/reset.css">
 <link rel="stylesheet" href="/css/main.css">
+<link rel="stylesheet" href="/css/form.css">
 <link href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css" rel="stylesheet" />
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"/>
 
@@ -59,7 +60,7 @@
 </head>
 <body>
 <!-- Header -->
-<header class="header" id="siteHeader">
+ <header class="header" id="siteHeader">
   <div class="bar">
     <!-- 모바일: 햄버거 버튼 -->
     <button class="hamburger" aria-controls="gnb" aria-expanded="false" aria-label="메뉴 열기/닫기">
@@ -67,7 +68,7 @@
     </button>
 
     <!-- 로고 -->
-    <a class="logo" href="#">
+    <a class="logo" href="index.html">
       <img src="/img/logo.png" alt="">
     </a>
 
@@ -77,22 +78,7 @@
     <nav class="gnb" id="gnb" aria-label="주 메뉴">
       <ul>
         <li>
-          <a href="#" aria-haspopup="true" aria-expanded="false">병원소개</a>
-          <div class="mega" role="region" aria-label="병원소개 하위메뉴">
-            <div class="wrap">
-              <div class="col bg">
-                <!-- <h3>병원소개</h3> -->
-                <ul class="menu">
-                  <li><a class="item" href="#"><span>ABOUT ELITE</span></a></li>
-                  <li><a class="item" href="#"><span>의료진소개</span></a></li>
-                  <li><a class="item" href="#"><span>안전시스템</span></a></li>
-                  <li><a class="item" href="#"><span>진료안내</span></a></li>
-                  <li><a class="item" href="#"><span>둘러보기</span></a></li>
-                </ul>
-              </div>
-              <div><!-- 필요시 배너/이미지 --></div>
-            </div>
-          </div>
+          <a href="introduce.html">병원소개</a>
         </li>
 
         <!-- 필요 메뉴 계속… (기존과 동일) -->
@@ -188,24 +174,38 @@
             </div>
           </div>
         </li>
-        <li><a href="#">커뮤니티</a></li>
+                <li>
+            <a href="#">커뮤니티</a>
+            <div class="mega" role="region" aria-label="병원소개 하위메뉴">
+            <div class="wrap">
+              <div class="col bg">
+                <!-- <h3>병원소개</h3> -->
+                <ul class="menu">
+                  <li><a class="item" href="review.html"><span>리얼후기</span></a></li>
+                  <li><a class="item" href="notice.html"><span>공지사항</span></a></li>
+                </ul>
+              </div>
+              <div><!-- 필요시 배너/이미지 --></div>
+            </div>
+          </div>
+        </li>
       </ul>
     </nav>
 
     <!-- 데스크톱: 텍스트형 login/join -->
     <div class="auth-desktop" style="position: relative;">
-      <a href="#">LOGIN</a>
+      <a href="login.html">LOGIN</a>
       <!-- <div style="position: absolute; width: 1px; height: 5px; background: #000;"></div> -->
-      <a href="#">JOIN</a>
+      <a href="join.html">JOIN</a>
     </div>
 
     <!-- 모바일: 동그란 아이콘 + 라벨 -->
     <div class="auth-mobile" aria-label="사용자 액션">
-      <a href="#" class="item">
+      <a href="join.html" class="item">
         <span class="circle"><img src="/img/join_icon.png" alt="회원가입아이콘"></span>
         <span class="label">JOIN</span>
       </a>
-      <a href="#" class="item">
+      <a href="login.html" class="item">
         <span class="circle"><img src="/img/login_icon.png" alt="로그인아이콘"></span>
         <span class="label">LOGIN</span>
       </a>
@@ -225,113 +225,12 @@
 <link rel="preconnect" href="https://ssl.daumcdn.net">
 
 <style>
-  /* 공통 */
-  *{box-sizing:border-box}
-  .rv-hero{padding: 0; margin: 0;}
-  .wrap{max-width:1400px;margin:0 auto;padding:150px 0px;}
-  .section{margin-bottom:150px}
 
-  /* ========== 상단 프로필 카드 ========== */
-  .info-hero{
-    display:grid;grid-template-columns:1.1fr 1.1fr;justify-items:center;
-    padding:58px 0;border-radius:22px;
-    background:url('/img/introduce_bg.png') no-repeat center/cover;
-    color:#fff
-  }
-  .info-hero .left div.line{width:100%;border:1px solid #fff;margin:40px 0}
-  .info-hero .left .badge{display:inline-block;margin-bottom:40px;padding:6px 10px;border-radius:999px;font-size:16px;font-weight:700;background:none}
-  .info-hero .left h3{margin:0;color:#fff;font-size:36px;letter-spacing:-.2px}
-  .info-hero .left h3 span{font-size:18px}
-  .info-hero .left ul{margin:14px 0 0;padding:0;list-style:none;line-height:1.9}
-  .info-hero .right{display:flex;flex-direction:column;justify-content:center;gap:40px}
-  .info-hero .right h4{margin:0;font-size:36px;font-weight:600;color:#fff}
-  .info-hero .right p{margin:0;line-height:1.5;font-weight:400;font-size:20px}
-  .info-hero .badge_flex{display:flex;gap:40px}
-.info-hero .left p{font-size: 20px;}
-  /* ========== 위치/지도 + 정보 ========== */
-  .loc-wrap{max-width:1400px;margin:0 auto;}
-  .loc-top{display:flex;gap:60px;align-items:flex-start}
-
-  /* 지도 카드 */
-  .map-card{flex:1 1 52%;border-radius:18px;overflow:hidden;border:1px solid #eee;box-shadow:0 8px 24px rgba(0,0,0,.06);background:#fff; height: 555px;}
-  .map-box{position:relative;width:100%}
-  /* 높이 보장 (padding-top 폴백) */
-  .map-box::before{content:"";display:block;padding-top:66%}
-  /* 지원시 aspect-ratio 사용 */
-  @supports (aspect-ratio:1){
-    .map-box{aspect-ratio:12.5/10}
-    .map-box::before{display:none}
-  }
-  .map-abs{position:absolute;inset:0;min-height:260px} /* 모바일에서도 최소 높이 보장 */
-
-  /* 카카오 roughmap: 100% 채우기 */
-  .root_daum_roughmap,
-  .root_daum_roughmap_landing,
-  #daumRoughmapContainer1758773226337{width:100% !important;height:100% !important}
-  #daumRoughmapContainer1758773226337 .map_border{border:none !important}
-
-  /* 우측 정보 */
-  .info{flex:1 1 48%;}
-  .info h2{font-size:48px;line-height:1.35;font-weight:800;letter-spacing:-.3px;color:#111}
-  .info h2 span{font-weight: 400;}
-  .block{margin:40px 0}
-  .block.block_top{margin: 40px 0 0 0;}
-  .block .label{color:#FF78A2;font-weight:700;font-size:20px;letter-spacing:.02em;margin-bottom:20px}
-  .phone{font-weight:400;font-size:30px;color:#131313;}
-
-  /* 진료시간(Flex) */
-  .hours{display:flex;gap:24px;flex-wrap:wrap;font-size:16px;color:#333}
-  .hours .col{display:flex;gap:10px;align-items:center;white-space:nowrap}
-  .hours .name{font-weight:700;color:#111;min-width:120px}
-  .hours .time{color:#333}
-  .hours small{color:#9aa0a6;margin-left:6px}
-
-  /* 온라인 버튼 */
-  .btns{display:flex;gap:12px;margin-top:10px}
-  .btn{display:inline-flex;align-items:center;gap:8px;height:42px;padding:0 30px;border-radius:999px;background:#F7F7F7;color:#131313;text-decoration:none;font-weight:700;font-size:16px; justify-content: center;}
-  .badge-ico{width:22px;height:22px;border-radius:6px;background:#111;display:inline-block}
-  .btn.light .badge-ico{background:#cfeecf}
-
-  /* 하단 칩 */
-  .loc-chips{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;}
-  .chip{background:#fff;border:1px solid #eceff1;border-radius:16px;padding:18px;display:flex;gap:12px;align-items:flex-start;box-shadow:0 6px 18px rgba(0,0,0,.04)}
-  .chip .ico{width:32px;height:32px;border-radius:999px;background:#ffe3ec;display:grid;place-items:center;color:#ff78a2;font-weight:800;flex:0 0 32px}
-  .chip h4{margin:2px 0 6px;font-size:18px;font-weight:500;color:#131313;}
-  .chip p{margin:0;color:#555;font-size:16px}
-  .line{width: 100%; border: 1px solid #eee; margin: 40px;}
-  /* 반응형 */
-  @media (max-width:1100px){
-    .info-hero{grid-template-columns:1fr;gap:40px;background:linear-gradient(135deg,#a88f6b 0%, #b9a17d 45%, #b7a89088 100%)}
-    .loc-top{flex-direction:column}
-    .info h2{font-size:28px}
-    .hours .name{min-width:110px}
-    .map-card{width: 100%; height: 500px;}
-    .info-hero .badge_flex{flex-direction: column; gap: 0;}
-    .info-hero .left{width: 100%;}
-    .info-hero .right{width: 100%; gap: 10px;}
-    .info-hero .left p{font-size: 20px;}
-    .info-hero .left li{font-size: 16px;}
-    .info-hero .right h4{font-size: 24px;}
-    .info-hero .right p{font-size: 16px;}
-    .section{margin-bottom: 60px;}
-    .line{margin: 0 0 40px 0;}
-  }
-  @media (max-width:640px){
-    .wrap{padding:48px 15px 72px}
-    .info-hero{padding:26px;border-radius:18px}
-    .info-hero .left h3{font-size:24px}
-    .info h2{font-size:24px}
-    .hours{gap:14px}
-    .hours .name{min-width:98px}
-    .loc-chips{grid-template-columns:1fr}
-    /* 모바일 지도 비율 조금 높임 */
-    @supports not (aspect-ratio:1){ .map-box::before{padding-top:70%} }
-  }
 </style>
 
-<main class="wrap">
+<main class="con">
   <!-- 상단 프로필 카드 -->
-  <section class="section info-hero">
+  <section class="section_info info-hero" data-aos="fade-up">
     <div class="left">
       <span class="badge">성형외과 전문의</span>
       <h3>윤병하 <span>대표원장</span></h3>
@@ -346,9 +245,9 @@
           <li>· 서울 백병원 성형외과 조교수</li>
           <li>· 한양대 의료원 성형외과 왜래 부교수</li>
         </ul>
-        <ul>
+        <ul class="zero">
           <li>· 인제대 서울 백병원 성형외과 외래 부교수</li>
-          <li>· 대한 의학 레이저 학외 간사 역임</li>
+          <li>· 대한 의학 레이저 학회 간사 역임</li>
           <li>· 대한 성형외과 학회 정회원</li>
           <li>· 대한 미용 성형외과 학회 정회원</li>
           <li>· 대한 미세수술 학회 정회원</li>
@@ -363,7 +262,7 @@
   </section>
 
   <!-- 위치 & 진료 안내 -->
-  <section class="loc-wrap" aria-labelledby="locTitle">
+  <section class="loc-wrap" aria-labelledby="locTitle" data-aos="fade-up">
     <div class="loc-top">
       <!-- 지도 -->
       <div class="map-card">
@@ -385,7 +284,7 @@
       </div>
 
       <!-- 정보 -->
-      <div class="info">
+      <div class="info" data-aos="fade-up">
         <h2 id="locTitle">7호선 부천시청역 3번 출구<br><span>도보 3분 내 위치합니다.</span></h2>
 
         <div class="block">
@@ -414,7 +313,7 @@
     </div>
     <div class="line"></div>
     <!-- 하단 안내 칩 -->
-    <div class="loc-chips">
+    <div class="loc-chips" data-aos="fade-up">
       <div class="chip"><img src="/img/introduce_icon01.png" alt="자가 아이콘"><div><h4>자가 이용시</h4><p>우신빌딩 입차, 건물 지하주차장 이용 가능</p></div></div>
       <div class="chip"><img src="/img/introduce_icon02.png" alt="전철 아이콘"><div><h4>전철 이용시</h4><p>7호선 부천시청역 3번 출구 도보 약 3분 거리</p></div></div>
       <div class="chip"><img src="/img/introduce_icon03.png" alt="시내버스 아이콘"><div><h4>시내버스 이용시</h4><p>부천시청역 정류장 하차 후 도보 2–4분 소요</p></div></div>
@@ -459,8 +358,19 @@
 
 
 
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
 <script src="/js/main.js"></script>
+
+
+<script>
+		AOS.init({
+			once: true,
+			duration: 1200,
+		});
+</script>
 
 
 

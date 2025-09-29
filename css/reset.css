@@ -61,7 +61,7 @@ select {
    -webkit-appearance: none;
    -moz-appearance: none;
    appearance: none;
-   background: url(../img/common/select_arrow.svg) no-repeat right 10px center #fff !important;
+   /* background: url(../img/common/select_arrow.svg) no-repeat right 10px center #fff !important; */
    background-size:16px !important;
    padding:0 30px 0 10px !important;
 }

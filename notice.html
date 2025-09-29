@@ -60,7 +60,7 @@
 </head>
 <body>
 <!-- Header -->
-<header class="header" id="siteHeader">
+ <header class="header" id="siteHeader">
   <div class="bar">
     <!-- 모바일: 햄버거 버튼 -->
     <button class="hamburger" aria-controls="gnb" aria-expanded="false" aria-label="메뉴 열기/닫기">
@@ -68,8 +68,8 @@
     </button>
 
     <!-- 로고 -->
-    <a class="logo" href="#">
-      <img src="/img/logo.png" alt="">
+    <a class="logo" href="index.html">
+      <img src="/img/logo.png" alt="로고사진">
     </a>
 
     <div class="spacer"></div>
@@ -78,22 +78,7 @@
     <nav class="gnb" id="gnb" aria-label="주 메뉴">
       <ul>
         <li>
-          <a href="#" aria-haspopup="true" aria-expanded="false">병원소개</a>
-          <div class="mega" role="region" aria-label="병원소개 하위메뉴">
-            <div class="wrap">
-              <div class="col bg">
-                <!-- <h3>병원소개</h3> -->
-                <ul class="menu">
-                  <li><a class="item" href="#"><span>ABOUT ELITE</span></a></li>
-                  <li><a class="item" href="#"><span>의료진소개</span></a></li>
-                  <li><a class="item" href="#"><span>안전시스템</span></a></li>
-                  <li><a class="item" href="#"><span>진료안내</span></a></li>
-                  <li><a class="item" href="#"><span>둘러보기</span></a></li>
-                </ul>
-              </div>
-              <div><!-- 필요시 배너/이미지 --></div>
-            </div>
-          </div>
+          <a href="introduce.html">병원소개</a>
         </li>
 
         <!-- 필요 메뉴 계속… (기존과 동일) -->
@@ -189,24 +174,38 @@
             </div>
           </div>
         </li>
-        <li><a href="#">커뮤니티</a></li>
+                <li>
+            <a href="#">커뮤니티</a>
+            <div class="mega" role="region" aria-label="병원소개 하위메뉴">
+            <div class="wrap">
+              <div class="col bg">
+                <!-- <h3>병원소개</h3> -->
+                <ul class="menu">
+                  <li><a class="item" href="review.html"><span>리얼후기</span></a></li>
+                  <li><a class="item" href="notice.html"><span>공지사항</span></a></li>
+                </ul>
+              </div>
+              <div><!-- 필요시 배너/이미지 --></div>
+            </div>
+          </div>
+        </li>
       </ul>
     </nav>
 
     <!-- 데스크톱: 텍스트형 login/join -->
     <div class="auth-desktop" style="position: relative;">
-      <a href="#">LOGIN</a>
+      <a href="login.html">LOGIN</a>
       <!-- <div style="position: absolute; width: 1px; height: 5px; background: #000;"></div> -->
-      <a href="#">JOIN</a>
+      <a href="join.html">JOIN</a>
     </div>
 
     <!-- 모바일: 동그란 아이콘 + 라벨 -->
     <div class="auth-mobile" aria-label="사용자 액션">
-      <a href="#" class="item">
+      <a href="join.html" class="item">
         <span class="circle"><img src="/img/join_icon.png" alt="회원가입아이콘"></span>
         <span class="label">JOIN</span>
       </a>
-      <a href="#" class="item">
+      <a href="login.html" class="item">
         <span class="circle"><img src="/img/login_icon.png" alt="로그인아이콘"></span>
         <span class="label">LOGIN</span>
       </a>
@@ -223,58 +222,7 @@
     <img class="mo_only" src="/img/hero_content02_m.jpg" alt="공지사항 모바일">
   </figure>
 
-  
-<style>
-  /* ===== Container ===== */
-  .notice{width:1400px;max-width:100%; margin: 0 auto; padding:60px 0 60px}
-  .notice-title{margin:0 0 14px;font:700 22px/1.3;}
-  .notice-wrap{background:#fff;border-top:3px solid #ff7aa7;border-bottom:1px solid #eee}
 
-  /* ===== List ===== */
-  .nt-head,.nt-row{
-    display:grid;grid-template-columns:80px 14px 1fr 140px;
-    align-items:center;gap:0;border-bottom:1px solid #eee;min-height:54px
-  }
-  .nt-head{font-weight:700;color:#777;background:#fafafa}
-  .nt-sep{width:1px;height:18px;background:#e8e8e8;justify-self:center}
-  .nt-num{color:#999;text-align:center}
-  .nt-title{padding:0 16px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-  .nt-date{color:#666;text-align:right;padding-right:12px}
-  .nt-row{cursor:pointer}
-  .nt-row:hover .nt-title{text-decoration:underline}
-
-  /* clickable overlay for full-row anchor */
-  .nt-row > a{
-    position:absolute;inset:0;display:block;text-indent:-9999px;overflow:hidden
-  }
-  .nt-row-wrap{position:relative}
-
-  /* ===== Empty ===== */
-  .nt-empty{padding:46px 16px;color:#999;text-align:center}
-
-  /* ===== Pagination ===== */
-  .nt-paging{
-    display:flex;gap:10px;align-items:center;justify-content:center;margin:24px 0 0;color:#9aa0a6
-  }
-  .nt-pagebtn{
-    appearance:none;border:none;background:transparent;color:#9aa0a6;
-    width:28px;height:28px;border-radius:999px;cursor:pointer
-  }
-  .nt-pagebtn:hover{background:#f6f6f8;color:#666}
-  .nt-pagebtn[disabled]{opacity:.35;cursor:default}
-  .nt-numbtn{font-weight:600}
-  .nt-numbtn.is-current{background:#ff7aa7;color:#fff;box-shadow:0 2px 6px rgba(255,122,167,.35)}
-
-  /* ===== Responsive ===== */
-  @media (max-width:860px){
-    .nt-head,.nt-row{grid-template-columns:64px 12px 1fr 108px}
-  }
-  @media (max-width:640px){
-    .notice{padding:40px 15px;}
-    .nt-head,.nt-row{grid-template-columns:54px 10px 1fr 92px;min-height:50px}
-    .notice-title{font-size:20px}
-  }
-</style>
 
 
 <main class="notice" aria-labelledby="noticeTitle">
@@ -304,17 +252,17 @@
   */
   const DATA = [
     {id:11,title:'자극받은 여름피부, 레이저 & 리프팅 집중케어',date:'2025-07-29',url:'/detail_notice.html'},
-    {id:10,title:'8월 휴진 및 진료시간 안내',date:'2025-07-28',url:'/notice/58'},
-    {id:9,title:'여름 이벤트 2차 오픈 안내',date:'2025-07-26',url:'/notice/57'},
-    {id:8,title:'고객센터 전화 일시 장애 복구',date:'2025-07-25',url:'/notice/56'},
-    {id:7,title:'리뷰 인증 혜택 변경 안내',date:'2025-07-20',url:'/notice/55'},
-    {id:6,title:'원내 마스크 착용 권고 안내',date:'2025-07-15',url:'/notice/54'},
-    {id:5,title:'주차요금 지원 기준 변경',date:'2025-07-12',url:'/notice/53'},
-    {id:4,title:'7월 감사 이벤트 당첨자 발표',date:'2025-07-10',url:'/notice/52'},
+    {id:10,title:'8월 휴진 및 진료시간 안내',date:'2025-07-28',url:''},
+    {id:9,title:'여름 이벤트 2차 오픈 안내',date:'2025-07-26',url:''},
+    {id:8,title:'고객센터 전화 일시 장애 복구',date:'2025-07-25',url:''},
+    {id:7,title:'리뷰 인증 혜택 변경 안내',date:'2025-07-20',url:''},
+    {id:6,title:'원내 마스크 착용 권고 안내',date:'2025-07-15',url:''},
+    {id:5,title:'주차요금 지원 기준 변경',date:'2025-07-12',url:''},
+    {id:4,title:'7월 감사 이벤트 당첨자 발표',date:'2025-07-10',url:''},
     // 8개 초과 → 2페이지로 넘어가게 추가
-    {id:3,title:'정전 점검으로 인한 진료 지연 안내',date:'2025-07-08',url:'/notice/51'},
-    {id:2,title:'비급여 수가표 개정 안내',date:'2025-07-05',url:'/notice/50'},
-    {id:1,title:'카카오 채널 상담 점검 공지',date:'2025-07-01',url:'/notice/49'}
+    {id:3,title:'정전 점검으로 인한 진료 지연 안내',date:'2025-07-08',url:''},
+    {id:2,title:'비급여 수가표 개정 안내',date:'2025-07-05',url:''},
+    {id:1,title:'카카오 채널 상담 점검 공지',date:'2025-07-01',url:''}
   ];
 
   /* ===== Settings ===== */
@@ -450,11 +398,20 @@
 
 
 
+
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
 <script src="/js/main.js"></script>
 
 
-
+<script>
+		AOS.init({
+			once: true,
+			duration: 1200,
+		});
+</script>
 
 </body>
 </html>

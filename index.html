@@ -59,7 +59,7 @@
 </head>
 <body>
 <!-- Header -->
-<header class="header" id="siteHeader">
+ <header class="header" id="siteHeader">
   <div class="bar">
     <!-- 모바일: 햄버거 버튼 -->
     <button class="hamburger" aria-controls="gnb" aria-expanded="false" aria-label="메뉴 열기/닫기">
@@ -67,7 +67,7 @@
     </button>
 
     <!-- 로고 -->
-    <a class="logo" href="#">
+    <a class="logo" href="index.html">
       <img src="/img/logo.png" alt="">
     </a>
 
@@ -77,22 +77,7 @@
     <nav class="gnb" id="gnb" aria-label="주 메뉴">
       <ul>
         <li>
-          <a href="#" aria-haspopup="true" aria-expanded="false">병원소개</a>
-          <div class="mega" role="region" aria-label="병원소개 하위메뉴">
-            <div class="wrap">
-              <div class="col bg">
-                <!-- <h3>병원소개</h3> -->
-                <ul class="menu">
-                  <li><a class="item" href="#"><span>ABOUT ELITE</span></a></li>
-                  <li><a class="item" href="#"><span>의료진소개</span></a></li>
-                  <li><a class="item" href="#"><span>안전시스템</span></a></li>
-                  <li><a class="item" href="#"><span>진료안내</span></a></li>
-                  <li><a class="item" href="#"><span>둘러보기</span></a></li>
-                </ul>
-              </div>
-              <div><!-- 필요시 배너/이미지 --></div>
-            </div>
-          </div>
+          <a href="introduce.html">병원소개</a>
         </li>
 
         <!-- 필요 메뉴 계속… (기존과 동일) -->
@@ -188,24 +173,38 @@
             </div>
           </div>
         </li>
-        <li><a href="#">커뮤니티</a></li>
+                <li>
+            <a href="#">커뮤니티</a>
+            <div class="mega" role="region" aria-label="병원소개 하위메뉴">
+            <div class="wrap">
+              <div class="col bg">
+                <!-- <h3>병원소개</h3> -->
+                <ul class="menu">
+                  <li><a class="item" href="review.html"><span>리얼후기</span></a></li>
+                  <li><a class="item" href="notice.html"><span>공지사항</span></a></li>
+                </ul>
+              </div>
+              <div><!-- 필요시 배너/이미지 --></div>
+            </div>
+          </div>
+        </li>
       </ul>
     </nav>
 
     <!-- 데스크톱: 텍스트형 login/join -->
     <div class="auth-desktop" style="position: relative;">
-      <a href="#">LOGIN</a>
+      <a href="login.html">LOGIN</a>
       <!-- <div style="position: absolute; width: 1px; height: 5px; background: #000;"></div> -->
-      <a href="#">JOIN</a>
+      <a href="join.html">JOIN</a>
     </div>
 
     <!-- 모바일: 동그란 아이콘 + 라벨 -->
     <div class="auth-mobile" aria-label="사용자 액션">
-      <a href="#" class="item">
+      <a href="join.html" class="item">
         <span class="circle"><img src="/img/join_icon.png" alt="회원가입아이콘"></span>
         <span class="label">JOIN</span>
       </a>
-      <a href="#" class="item">
+      <a href="login.html" class="item">
         <span class="circle"><img src="/img/login_icon.png" alt="로그인아이콘"></span>
         <span class="label">LOGIN</span>
       </a>
@@ -279,8 +278,8 @@
   <div class="best-wrap">
     <!-- Left: 제목/카피 -->
     <div class="best-left">
-      <small class="eyebrow">Dr.yun Best</small>
-      <h2 class="best-title">
+      <small class="eyebrow" data-aos="fade-up">Dr.yun Best</small>
+      <h2 class="best-title" data-aos="fade-up">
         지금 닥터윤에서<br>
         <b>가장 인기있는 성형</b>
       </h2>
@@ -289,7 +288,7 @@
         자연스럽고 세련된 결과를 만나보세요.
       </p> -->
 
-      <div class="best-ctrl">
+      <div class="best-ctrl" data-aos="fade-up">
         <button class="best-prev" aria-label="이전">
           <img src="/img/prev.png" alt="이전">
         </button>
@@ -300,7 +299,7 @@
     </div>
 
     <!-- Right: 가로 슬라이드 -->
-    <div class="best-slider" id="bestSlider" aria-roledescription="carousel">
+    <div class="best-slider" id="bestSlider" aria-roledescription="carousel" data-aos="fade-up">
       <!-- 카드 1 -->
       <article class="bcard" aria-label="눈성형">
         <img src="/img/main_slide01_cont01.png" alt="">
@@ -357,11 +356,11 @@
 <section class="equip-sec">
   <div class="equip-inner">
     <div class="equip-head">
-      <small class="equip-eyebrow">당신만을 위한 맞춤 시술</small>
-      <h2 class="equip-title">닥터윤 시그니처 리프팅</h2>
+      <small data-aos="fade-up" class="equip-eyebrow">당신만을 위한 맞춤 시술</small>
+      <h2 data-aos="fade-up" class="equip-title">닥터윤 시그니처 리프팅</h2>
     </div>
 
-    <div class="equip-swiper">
+    <div class="equip-swiper" data-aos="fade-up">
       <div class="equip-nav">
         <button class="equip-btn equip-prev" aria-label="이전"><img src="/img/prev.png" alt="이전"></button>
         <button class="equip-btn equip-next" aria-label="다음"><img src="/img/next.png" alt="다음"></button>
@@ -384,7 +383,7 @@
           <div class="swiper-slide">
             <article class="device">
               <div class="thumb">
-                <img src="" alt="프락셀">
+                <img src="/img/eqiment02.png" alt="프락셀">
               </div>
               <h4 class="name">프락셀</h4>
                <span></span>
@@ -464,7 +463,7 @@
 </section>
 
 
-<section class="content_bg" style="width: 100%; overflow-x: hidden;" >
+<section class="content_bg" style="width: 100%; overflow-x: hidden;" data-aos="fade-up" >
     <img class="pc_only" src="/img/section_content_bg.jpg" alt="">
     <img class="mo_only" src="/img/section_content_bg_m.jpg" alt="">
 </section>
@@ -472,12 +471,12 @@
 
 <section class="svc-section con_main">
   <div class="svc-inner">
-    <div class="svc-head">
+    <div class="svc-head" data-aos="fade-up">
       <h2>닥터윤 성형외과의 <b>차별화된 서비스</b></h2>
     </div>
 
     <div class="svc-row">
-      <div class="svc-text">
+      <div class="svc-text" data-aos="fade-up">
         <span class="svc-badge">01</span>
         <h3>실력있는 성형외과 전문의</h3>
         <p>
@@ -485,13 +484,13 @@
           풍부한 케이스 기반의 섬세한 디테일로 자연스러운 결과를 지향합니다.
         </p>
       </div>
-      <div class="svc-media">
+      <div class="svc-media" data-aos="fade-up">
         <img src="/img/main_footer01.png" alt="실력있는 성형외과 전문의">
       </div>
     </div>
 
     <div class="svc-row">
-      <div class="svc-text">
+      <div class="svc-text" data-aos="fade-up">
         <span class="svc-badge">02</span>
         <h3>오직 당신만을 위한 맞춤 수술</h3>
         <p>
@@ -499,13 +498,13 @@
           디자인부터 수술, 사후관리까지 전 과정에 책임을 다합니다.
         </p>
       </div>
-      <div class="svc-media">
+      <div class="svc-media" data-aos="fade-up">
         <img src="/img/main_footer02.png" alt="오직 당신만을 위한 맞춤 수술">
       </div>
     </div>
 
     <div class="svc-row">
-      <div class="svc-text">
+      <div class="svc-text" data-aos="fade-up">
         <span class="svc-badge">03</span>
         <h3>결과에 대한 자부심과 책임감</h3>
         <p>
@@ -513,7 +512,7 @@
           사후관리 프로그램으로 만족스러운 경험을 완성합니다.
         </p>
       </div>
-      <div class="svc-media">
+      <div class="svc-media" data-aos="fade-up">
         <img src="/img/main_footer03.png" alt="결과에 대한 자부심과 책임감">
       </div>
     </div>
@@ -547,12 +546,12 @@
     </div>
 
     <!-- Right: Info -->
-    <aside class="map-right">
-      <h2 class="map-title">오시는 길</h2>
-      <p class="map-sub">경기도 부천시 원미구 길주로 189 (중동 1033번지 유신빌딩 3층)</p>
+    <aside class="map-right" data-aos="fade-up">
+      <h2 class="map-title" data-aos="fade-up">오시는 길</h2>
+      <p class="map-sub" data-aos="fade-up">경기도 부천시 원미구 길주로 189 (중동 1033번지 유신빌딩 3층)</p>
 
-      <div class="map-links">
-        <a class="map-btn" href="https://map.kakao.com/" target="_blank" rel="noopener">
+      <div class="map-links" data-aos="fade-up">
+        <a class="map-btn"  href="https://map.kakao.com/" target="_blank" rel="noopener">
           <span class="ico">
             <img src="/img/kakao.png" alt="">
           </span> 카카오 지도
@@ -564,24 +563,24 @@
         </a>
       </div>
 
-      <div class="map-phone">
+      <div class="map-phone"data-aos="fade-up" >
         <span class="label">문의전화</span>
         <a href="tel:0323219022" class="tel">032-321-9022</a>
       </div>
 
 
-      <span class="label hour">진료시간</span>
+      <span class="label hour" data-aos="fade-up">진료시간</span>
       <div class="map-hours">
-        <div class="row">
+        <div class="row" data-aos="fade-up">
           <b>월요일~목요일</b><span>10:30 ~ 19:00</span>
         </div>
-        <div class="row">
+        <div class="row" data-aos="fade-up">
           <b>금요일(야간)</b><span>10:30 ~ 20:30</span>
         </div>
-        <div class="row">
+        <div class="row" data-aos="fade-up">
           <b>토요일</b><span>10:30 ~ 15:00</span>
         </div>
-        <p class="note">*일요일, 공휴일 휴진</p>
+        <p class="note" data-aos="fade-up">*일요일, 공휴일 휴진</p>
       </div>
     </aside>
   </div>
@@ -622,11 +621,248 @@
 
 
 
+
+<!-- Quick Menu -->
+<nav class="quick" aria-label="빠른메뉴">
+  <a class="qk-item" href="tel:010-0000-0000">
+    <span class="qk-ico"><img src="/img/phone.png" alt="전화문의" /></span>
+    <span class="qk-txt">전화문의</span>
+  </a>
+
+  <a class="qk-item" href="/guide">
+    <span class="qk-ico"><img src="/img/location.png" alt="진료안내" /></span>
+    <span class="qk-txt">진료안내</span>
+  </a>
+
+  <a class="qk-item" href="/reservation">
+    <span class="qk-ico"><img src="/img/reserve.png" alt="진료예약" /></span>
+    <span class="qk-txt">진료예약</span>
+  </a>
+
+  <a class="qk-item" href="#" target="_blank" rel="noopener">
+    <span class="qk-ico"><img src="/img/form.png" alt="카톡상담" /></span>
+    <span class="qk-txt">카톡상담</span>
+  </a>
+</nav>
+
+<button id="btnTop" class="topbtn" aria-label="맨 위로 이동"></button>
+
+
+<style>
+
+
+/* 공통 컨테이너 */
+.quick{
+  position: fixed;
+  right: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 77px;
+  background: #fff;
+  border: 1px solid #eceff1;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0,0,0,.08);
+  padding: 20px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 30px;
+  z-index: 9999;
+  font-size: 14px;
+}
+
+/* 항목 */
+.qk-item{
+  display: grid;
+  grid-template-rows: 28px auto;
+  align-items: center;
+  justify-items: center;
+  color: var(--qk-ink);
+  text-decoration: none;
+  padding: 2px 8px;
+  line-height: 1.15;
+  font-size: 14px;
+}
+
+/* 아이콘 영역만 자리 고정 (이미지는 갖고 계신 것 사용) */
+.qk-ico{
+  width: 28px;
+  height: 28px;
+  display: grid;
+  place-items: center;
+}
+.qk-ico img{
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+  filter: none; /* 필요시 색상 조정 */
+}
+
+/* 텍스트 */
+.qk-txt{ margin-top: 15px; text-align: center; font-size: 14px;}
+
+/* 구분선 */
+.qk-item:not(:last-child){
+  position: relative;
+}
+.qk-item:not(:last-child)::after{
+  content: "";
+  position: absolute;
+  left: 12px;
+  right: 12px;
+  bottom: calc(-1 * 30px / 2);
+  height: 1px;
+  background: #eceff1;
+}
+
+/* 호버 효과(데스크톱) */
+@media (hover:hover){
+  .qk-item:hover .qk-ico img{
+    transform: translateY(-1px);
+  }
+  .qk-item:hover .qk-txt{
+    color: #ff78a2;
+  }
+}
+
+/* =========================
+   Mobile (<=768px): 하단 고정 그리드 4칸
+   ========================= */
+@media (max-width:768px){
+  .quick{
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: auto;
+    transform: none;
+    width: auto;
+    border-radius: 14px 14px 0 0;
+    padding: max(6px, env(safe-area-inset-bottom) * .2)
+             max(10px, env(safe-area-inset-left))
+             max(6px, env(safe-area-inset-bottom))
+             max(10px, env(safe-area-inset-right));
+    border-left: none;
+    border-right: none;
+    gap: 0;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+  }
+  .qk-item{
+    grid-template-rows: 24px auto;
+    padding: 8px 6px 10px;
+    font-size: 11.5px;
+  }
+  .qk-ico{ width: 24px; height: 24px; }
+  .qk-item::after{ display: none; }            /* 세로 구분선 제거 */
+  .qk-item + .qk-item{
+    border-left: 1px solid #eceff1;     /* 그리드 내부 분리선 */
+  }
+}
+
+:root{
+  --topbtn-size: 40px;
+  --topbtn-bg: #FF78A2;     /* 버튼 배경색 (원본 비슷한 오렌지) */
+  --topbtn-ink: #fff;       /* 아이콘(꺾쇠) 색 */
+  --topbtn-shadow: 0 10px 24px rgba(0,0,0,.18);
+}
+
+/* 기본 상태: 숨김 */
+.topbtn{
+  position: fixed;
+  right: max(16px, env(safe-area-inset-right));
+  bottom: calc(16px + env(safe-area-inset-bottom));
+  width: var(--topbtn-size);
+  height: var(--topbtn-size);
+  border: 0;
+  border-radius: 999px;
+  background: var(--topbtn-bg);
+  box-shadow: var(--topbtn-shadow);
+  cursor: pointer;
+  z-index: 9999;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(8px) scale(.96);
+  transition: opacity .18s ease, transform .18s ease, visibility 0s .18s; /* 숨김때 지연 */
+}
+
+/* 화살표(아이콘) – CSS로 그림 */
+.topbtn::before{
+  content: "";
+  position: absolute; inset: 0;
+  margin: auto;
+  width: 8px; height: 8px;
+  border-top: 3px solid var(--topbtn-ink);
+  border-right: 3px solid var(--topbtn-ink);
+  transform: rotate(-45deg);           /* ∧ 모양 */
+  top: 2px;                            /* 살짝 위로 */
+}
+
+/* 포커스/호버 */
+.topbtn:hover{ filter: brightness(1.05); }
+.topbtn:active{ transform: translateY(10px) scale(.95); }
+.topbtn:focus-visible{ outline: 2px solid #fff; outline-offset: 2px; }
+
+/* 활성 상태 */
+.topbtn.is-show{
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0) scale(1);
+  transition: opacity .18s ease, transform .18s ease; /* 보일 땐 즉시 */
+}
+
+/* 작은 화면에서 살짝 축소 */
+@media (max-width:640px){
+  :root{ --topbtn-size: 48px; }
+  .topbtn{bottom:12%;}
+}
+
+
+</style>
+
+<script>
+  (function(){
+    const btn = document.getElementById('btnTop');
+
+    // 스크롤 위치에 따라 노출
+    const toggleBtn = () => {
+      // 문서 높이가 화면보다 클 때 + 160px 이상 내려가면 표시
+      const hasScroll = document.documentElement.scrollHeight > window.innerHeight + 1;
+      const past = window.scrollY > 160;
+      btn.classList.toggle('is-show', hasScroll && past);
+    };
+
+    // 부드러운 스크롤 (사용자 설정을 존중)
+    const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+    btn.addEventListener('click', () => {
+      window.scrollTo({
+        top: 0,
+        behavior: prefersReduced ? 'auto' : 'smooth'
+      });
+    });
+
+    // 초기/스크롤/리사이즈 시 체크
+    ['load','scroll','resize'].forEach(evt =>
+      window.addEventListener(evt, toggleBtn, { passive: true })
+    );
+  })();
+</script>
+
+
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
 <script src="/js/main.js"></script>
 
 
-
+<script>
+		AOS.init({
+			once: true,
+			duration: 1200,
+		});
+</script>
 
 </body>
 </html>

@@ -9,7 +9,7 @@ body{overflow-x:hidden;}
    1) Root variables
 ========================================================= */
 :root{
-  --wrap: min(92vw, 980px);
+  --wrap: min(92vw, 1300px);
   --inner: 1200px;            /* infoBar 내부 최대폭 */
   --text:#111; --muted:#7b7f87;
   --sep:#e5e7eb;
@@ -118,9 +118,9 @@ body{overflow-x:hidden;}
   background:#fff;
 }
 .section01__inner{width:100%; margin:0 auto; display:grid; grid-template-columns:1fr; gap:clamp(20px, 4vw, 56px); align-items:center;}
-.section01__media{margin: 0; margin-top:40px;}
+.section01__media{margin: 0;}
 .section01__media.section01__media_01{margin: 0;}
-.section01__media img{width:100%; height:clamp(220px,45vw,460px); object-fit:cover; border-radius:16px; display:block; background:#f3f5f7;}
+.section01__media img{width:100%; height:clamp(220px,45vw,460px); object-fit:cover; border-radius:16px; display:block;}
 .section01__text{margin-left:0;}
 .eyebrow{font-size:20px; color:#ff5aa5; letter-spacing:.02em; margin:2px 0 10px; font-weight: 700;}
 .section01__title{font-size:clamp(24px,3.4vw,40px); line-height:1.5; letter-spacing:-.02em; margin:0 0 14px; font-weight:400;}
@@ -158,8 +158,10 @@ body{overflow-x:hidden;}
 .tabSection .panels .panel .surgerySteps .stepCard{background:#fff; border-radius:16px; overflow:hidden; box-shadow:0 3px 12px rgba(0,0,0,.06); transition:transform .2s, box-shadow .2s;}
 .tabSection .panels .panel .surgerySteps .stepCard:hover{transform:translateY(-2px); box-shadow:0 10px 28px rgba(0,0,0,.10);}
 .tabSection .panels .panel .surgerySteps .stepCard__media{aspect-ratio:4/3; width:100%; overflow:hidden; display:block;}
+.tabSection .panels .panel .surgerySteps .stepCard__media.stepCard__media_nose{aspect-ratio: 6/3;}
+.tabSection .panels .panel .surgerySteps .stepCard__media.stepCard__media_face01{aspect-ratio: 6/3;}
 .tabSection .panels .panel .surgerySteps .stepCard__media img{width:100%; height:100%; object-fit:cover; display:block;}
-.tabSection .panels .panel .surgerySteps .stepCard__bar{background:#151515; color:#fff; display:flex; align-items:center; gap:10px; padding:14px 18px; font-size:16px;}
+.tabSection .panels .panel .surgerySteps .stepCard__bar{background:#151515; color:#fff; display:flex; align-items:center; gap:10px; padding:14px 18px; font-size:16px;    justify-content: center; }
 .tabSection .panels .panel .surgerySteps .nose02_step .stepCard__bar{justify-content: center;}
 .tabSection .panels .panel .surgerySteps .nose02_step .txt{display: block; background: #151515; color: #fff; padding: 0 18px 14px 18px; padding-bottom: 14px;}
 .tabSection .panels .panel .surgerySteps .stepCard__bar .point{color:#ff5aa5; font-weight:700;}
@@ -203,6 +205,7 @@ body{overflow-x:hidden;}
 .tabSection .panels .panel .candidatesBG_nose07{background: url('../img/nose_content0707.png');}
 
 .tabSection .panels .panel .candidatesBG_face01{background: url('../img/face_content0101.png');}
+.tabSection .panels .panel .candidatesBG_face02{background: url('../img/face_content0202.png');}
 
 .tabSection .panels .panel .candidatesBG_chest01{background: url('../img/chest_content0101.png');}
 .tabSection .panels .panel .candidatesBG_chest02{background: url('../img/chest_content0202.png');}
@@ -261,7 +264,7 @@ body{overflow-x:hidden;}
 .body_content_box .txt_box .flex_box span{color: #FF78A2; font-size: 18px; font-weight: 500;}
 /* >= 1025px 데스크톱 */
 @media (min-width:1025px){
-  .tabs{justify-content:center; grid-auto-flow:row; grid-template-columns:repeat(7,max-content); overflow:visible;}
+  .tabs{justify-content:center; grid-auto-flow:row; grid-template-columns:repeat(8,max-content); overflow:visible;}
   .section01__inner{grid-template-columns:1fr 1.1fr;}
   .section01__text{margin-left:240px;}
   .section01__media{order:1;}
@@ -302,6 +305,7 @@ body{overflow-x:hidden;}
   .tabSection .panels .panel .candidatesBG_nose07{background: url('../img/nose_content0707_m.jpg') center no-repeat;}
 
   .tabSection .panels .panel .candidatesBG_face01{background: url('../img/face_content0101_m.jpg') center no-repeat;}
+  .tabSection .panels .panel .candidatesBG_face02{background: url('../img/face_content0202_m.jpg') center no-repeat;}
 
   .tabSection .panels .panel .candidatesBG_chest01{background: url('../img/chest_content0101_m.jpg') center no-repeat;}
   .tabSection .panels .panel .candidatesBG_chest02{background: url('../img/chest_content0202_m.jpg') center no-repeat;}

@@ -52,7 +52,7 @@
 <body>
 
     <!-- Header -->
-   <header class="header" id="siteHeader">
+ <header class="header" id="siteHeader">
   <div class="bar">
     <!-- 모바일: 햄버거 버튼 -->
     <button class="hamburger" aria-controls="gnb" aria-expanded="false" aria-label="메뉴 열기/닫기">
@@ -60,7 +60,7 @@
     </button>
 
     <!-- 로고 -->
-    <a class="logo" href="#">
+    <a class="logo" href="index.html">
       <img src="/img/logo.png" alt="">
     </a>
 
@@ -70,22 +70,7 @@
     <nav class="gnb" id="gnb" aria-label="주 메뉴">
       <ul>
         <li>
-          <a href="#" aria-haspopup="true" aria-expanded="false">병원소개</a>
-          <!-- <div class="mega" role="region" aria-label="병원소개 하위메뉴">
-            <div class="wrap">
-              <div class="col bg">
-                 <h3>병원소개</h3>
-                <ul class="menu">
-                  <li><a class="item" href="#"><span>ABOUT ELITE</span></a></li>
-                  <li><a class="item" href="#"><span>의료진소개</span></a></li>
-                  <li><a class="item" href="#"><span>안전시스템</span></a></li>
-                  <li><a class="item" href="#"><span>진료안내</span></a></li>
-                  <li><a class="item" href="#"><span>둘러보기</span></a></li>
-                </ul>
-              </div>
-              <div> 필요시 배너/이미지</div>
-            </div>
-          </div> -->
+          <a href="introduce.html">병원소개</a>
         </li>
 
         <!-- 필요 메뉴 계속… (기존과 동일) -->
@@ -154,34 +139,66 @@
               <div class="col bg">
                 <!-- <h3>병원소개</h3> -->
                 <ul class="menu">
-                  <li><a class="item" href="eyesurgery_01.html"><span>지방흡입</span></a></li>
-                  <li><a class="item" href="eyesurgery_02.html"><span>HPL</span></a></li>
-                  <li><a class="item" href="eyesurgery_03.html"><span>액취증</span></a></li>
+                  <li><a class="item" href="body_01.html"><span>지방흡입</span></a></li>
+                  <li><a class="item" href="body_02.html"><span>HPL</span></a></li>
+                  <li><a class="item" href="body_03.html"><span>액취증</span></a></li>
                 </ul>
               </div>
               <div><!-- 필요시 배너/이미지 --></div>
             </div>
           </div>
         </li>
-        <li><a href="#">커뮤니티</a></li>
+        <li>
+            <a href="#">피부/안티에이징</a>
+            <div class="mega" role="region" aria-label="병원소개 하위메뉴">
+            <div class="wrap">
+              <div class="col bg">
+                <!-- <h3>병원소개</h3> -->
+                <ul class="menu">
+                  <li><a class="item" href="skin_01.html"><span>더블로</span></a></li>
+                  <li><a class="item" href="skin_02.html"><span>프락셀</span></a></li>
+                  <li><a class="item" href="skin_03.html"><span>레이저토닝</span></a></li>
+                  <li><a class="item" href="skin_04.html"><span>I2PL</span></a></li>
+                  <li><a class="item" href="skin_05.html"><span>고주파</span></a></li>
+                </ul>
+              </div>
+              <div><!-- 필요시 배너/이미지 --></div>
+            </div>
+          </div>
+        </li>
+                <li>
+            <a href="#">커뮤니티</a>
+            <div class="mega" role="region" aria-label="병원소개 하위메뉴">
+            <div class="wrap">
+              <div class="col bg">
+                <!-- <h3>병원소개</h3> -->
+                <ul class="menu">
+                  <li><a class="item" href="review.html"><span>리얼후기</span></a></li>
+                  <li><a class="item" href="notice.html"><span>공지사항</span></a></li>
+                </ul>
+              </div>
+              <div><!-- 필요시 배너/이미지 --></div>
+            </div>
+          </div>
+        </li>
       </ul>
     </nav>
 
     <!-- 데스크톱: 텍스트형 login/join -->
     <div class="auth-desktop" style="position: relative;">
-      <a href="#">LOGIN</a>
+      <a href="login.html">LOGIN</a>
       <!-- <div style="position: absolute; width: 1px; height: 5px; background: #000;"></div> -->
-      <a href="#">JOIN</a>
+      <a href="join.html">JOIN</a>
     </div>
 
     <!-- 모바일: 동그란 아이콘 + 라벨 -->
     <div class="auth-mobile" aria-label="사용자 액션">
-      <a href="#" class="item">
-        <span class="circle">👤</span>
+      <a href="join.html" class="item">
+        <span class="circle"><img src="/img/join_icon.png" alt="회원가입아이콘"></span>
         <span class="label">JOIN</span>
       </a>
-      <a href="#" class="item">
-        <span class="circle">🔑</span>
+      <a href="login.html" class="item">
+        <span class="circle"><img src="/img/login_icon.png" alt="로그인아이콘"></span>
         <span class="label">LOGIN</span>
       </a>
     </div>
@@ -197,7 +214,7 @@
         <section class="section01">
             <div class="section01__inner">
                 <!-- Image block -->
-                <figure class="section01__media">
+                <figure class="section01__media section01__media_01">
                     <!-- 필요 시 <source>로 webp 추가 가능 -->
                     <img src="/img/chest_top.png" alt="나만의 비율로 완성하는 자연스러운 볼륨 이미지"
                         loading="eager" decoding="async" />
@@ -787,7 +804,7 @@
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <!-- <script src="/js/main.js"></script> -->
+    <script src="/js/main.js"></script>
     	<script>
 		AOS.init({
 			once: true,

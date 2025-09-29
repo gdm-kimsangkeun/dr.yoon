@@ -60,7 +60,7 @@
 </head>
 <body>
 <!-- Header -->
-<header class="header" id="siteHeader">
+ <header class="header" id="siteHeader">
   <div class="bar">
     <!-- 모바일: 햄버거 버튼 -->
     <button class="hamburger" aria-controls="gnb" aria-expanded="false" aria-label="메뉴 열기/닫기">
@@ -68,8 +68,8 @@
     </button>
 
     <!-- 로고 -->
-    <a class="logo" href="#">
-      <img src="/img/logo.png" alt="">
+    <a class="logo" href="index.html">
+      <img src="/img/logo.png" alt="로고사진">
     </a>
 
     <div class="spacer"></div>
@@ -78,22 +78,7 @@
     <nav class="gnb" id="gnb" aria-label="주 메뉴">
       <ul>
         <li>
-          <a href="#" aria-haspopup="true" aria-expanded="false">병원소개</a>
-          <div class="mega" role="region" aria-label="병원소개 하위메뉴">
-            <div class="wrap">
-              <div class="col bg">
-                <!-- <h3>병원소개</h3> -->
-                <ul class="menu">
-                  <li><a class="item" href="#"><span>ABOUT ELITE</span></a></li>
-                  <li><a class="item" href="#"><span>의료진소개</span></a></li>
-                  <li><a class="item" href="#"><span>안전시스템</span></a></li>
-                  <li><a class="item" href="#"><span>진료안내</span></a></li>
-                  <li><a class="item" href="#"><span>둘러보기</span></a></li>
-                </ul>
-              </div>
-              <div><!-- 필요시 배너/이미지 --></div>
-            </div>
-          </div>
+          <a href="introduce.html">병원소개</a>
         </li>
 
         <!-- 필요 메뉴 계속… (기존과 동일) -->
@@ -189,24 +174,38 @@
             </div>
           </div>
         </li>
-        <li><a href="#">커뮤니티</a></li>
+                <li>
+            <a href="#">커뮤니티</a>
+            <div class="mega" role="region" aria-label="병원소개 하위메뉴">
+            <div class="wrap">
+              <div class="col bg">
+                <!-- <h3>병원소개</h3> -->
+                <ul class="menu">
+                  <li><a class="item" href="review.html"><span>리얼후기</span></a></li>
+                  <li><a class="item" href="notice.html"><span>공지사항</span></a></li>
+                </ul>
+              </div>
+              <div><!-- 필요시 배너/이미지 --></div>
+            </div>
+          </div>
+        </li>
       </ul>
     </nav>
 
     <!-- 데스크톱: 텍스트형 login/join -->
     <div class="auth-desktop" style="position: relative;">
-      <a href="#">LOGIN</a>
+      <a href="login.html">LOGIN</a>
       <!-- <div style="position: absolute; width: 1px; height: 5px; background: #000;"></div> -->
-      <a href="#">JOIN</a>
+      <a href="join.html">JOIN</a>
     </div>
 
     <!-- 모바일: 동그란 아이콘 + 라벨 -->
     <div class="auth-mobile" aria-label="사용자 액션">
-      <a href="#" class="item">
+      <a href="join.html" class="item">
         <span class="circle"><img src="/img/join_icon.png" alt="회원가입아이콘"></span>
         <span class="label">JOIN</span>
       </a>
-      <a href="#" class="item">
+      <a href="login.html" class="item">
         <span class="circle"><img src="/img/login_icon.png" alt="로그인아이콘"></span>
         <span class="label">LOGIN</span>
       </a>
@@ -312,7 +311,7 @@
 
   // 데이터 (skin 추가 예시 포함)
   const DATA = [
-    {id:1,  cat:'eye',  img:'/img/hero_review01.png',  title:'자연유쌍꺼풀, 붓기 적고 라인 안정적', desc:'3개월 경과 / 붓기 빠른 편, 메이크업 시 또렷함 확실.', url:'/skin_01.html' },
+    {id:1,  cat:'eye',  img:'/img/hero_review01.png',  title:'자연유쌍꺼풀, 붓기 적고 라인 안정적', desc:'3개월 경과 / 붓기 빠른 편, 메이크업 시 또렷함 확실.', url:'/detail.html' },
     {id:2,  cat:'eye',  img:'/img/hero_review02.png',  title:'앞트임 병행으로 눈매 확장',       desc:'흉터 최소화 / 평행형 라인 유지.'},
     {id:3,  cat:'eye',  img:'/img/hero_review03.png',  title:'부분절개로 회복 부담 ↓',          desc:'직장인 2주 내 일상 복귀 가능(개인차).'},
     {id:4,  cat:'nose', img:'/img/hero_review01.png',  title:'낮은 코 라인 보강',               desc:'코끝 지지 강화로 옆모습 각도 개선.'},
