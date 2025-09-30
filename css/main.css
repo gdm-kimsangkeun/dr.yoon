@@ -348,7 +348,7 @@
 .equip-btn{
   pointer-events:auto;width:42px;height:42px;border-radius:999px;
   background:transparent;display:grid;place-items:center;cursor:pointer;
- font-size:18px
+ font-size:18px; z-index: 100000;
 }
 .equip-btn:hover{filter:brightness(.98)}
 .equip-prev{margin-left:-75px;}
